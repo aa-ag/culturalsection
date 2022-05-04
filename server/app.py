@@ -6,7 +6,11 @@ from flask import Flask
 ### app configuration
 DEBUG = True
 
-############------------ FUNCTION(S) ------------############
+### app instantiation
+app = Flask(__name__)
+app.config.from_object(__name__)
+
+############------------ ROUTE(S) ------------############
 
 
 ############------------ DRIVER CODE ------------############
