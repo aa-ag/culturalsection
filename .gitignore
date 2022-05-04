@@ -5,6 +5,9 @@ settings.py
 config
 config.py
 
+csenv
+csenv/*
+
 # node_modules / blogify
 node_modules
 
