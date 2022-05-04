@@ -7,3 +7,4 @@ A responsive single-page app to compile events organized by consulates in differ
 ### environment
 
 - server: `source env/bin/activate`
+- client: `npm run serve`
