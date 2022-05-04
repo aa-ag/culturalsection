@@ -12,7 +12,7 @@ app = Flask(__name__)
 app.config.from_object(__name__)
 
 ############------------ ROUTE(S) ------------############
-@app.route('/', methodcaller=['GET'])
+@app.route('/', methods=['GET'])
 def hello():
     return jsonify('World')
 
