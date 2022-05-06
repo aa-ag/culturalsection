@@ -1,5 +1,4 @@
 ############------------ IMPORTS ------------############
-from operator import methodcaller
 from flask import Flask, jsonify
 
 
