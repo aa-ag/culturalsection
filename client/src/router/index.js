@@ -4,6 +4,11 @@ import World from "../components/World.vue";
 
 const routes = [
   {
+    path: "/hello",
+    name: "World",
+    component: World,
+  },
+  {
     path: "/",
     name: "Home",
     component: Home,
