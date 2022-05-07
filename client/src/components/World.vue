@@ -6,27 +6,27 @@
 <script>
 import axios from 'axios'
 export default {
-    name: 'World',
-    data() {
-        return {
-            msg: '',
-        };
+  name: 'World',
+  data() {
+      return {
+          msg: '',
+      };
+  },
+  methods: {
+    getMessage() {
+      const path = 'http://localhost:5000/hello';
+      axios.get(path)
+        .then((res) => {
+          this.msg = res.data;
+        })
+        .catch((error) => {
+          // eslint-disable-next-line
+          console.error(error)
+        });
     },
-    methods: {
-        getMessage() {
-            const path = 'http://localhost:5000/hello';
-            axios.get(path)
-              .then((res) => {
-                this.msg = res.data;
-              })
-              .catch((error) => {
-                // eslint-disable-next-line
-                console.error(error)
-              });
-        },
-    },
-    created() {
-      this.getMessage();
-    },
+  },
+  created() {
+    this.getMessage();
+  },
 };
 </script>
