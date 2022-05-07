@@ -16,9 +16,9 @@ app.config.from_object(__name__)
 CORS(app, resources={r'/*': {'origins': '*'}})
 
 ############------------ ROUTE(S) ------------############
-@app.route('/', methods=['GET'])
+@app.route('/hello', methods=['GET'])
 def hello():
-    return jsonify('World')
+    return jsonify('World ;)')
 
 
 ############------------ DRIVER CODE ------------############
