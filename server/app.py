@@ -1,5 +1,4 @@
 ############------------ IMPORTS ------------############
-import resource
 from flask import Flask, jsonify
 from flask_cors import CORS
 
@@ -16,9 +15,9 @@ app.config.from_object(__name__)
 CORS(app, resources={r'/*': {'origins': '*'}})
 
 ############------------ ROUTE(S) ------------############
-@app.route('/hello', methods=['GET'])
-def hello():
-    return jsonify('World ;)')
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify('Hello World!')
 
 
 ############------------ DRIVER CODE ------------############
