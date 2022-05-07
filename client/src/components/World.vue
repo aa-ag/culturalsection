@@ -23,7 +23,10 @@ export default {
                 // eslint-disable-next-line
                 console.error(error)
               });
-        }
-    }
+        },
+    },
+    created() {
+      this.getMessage();
+    },
 };
 </script>
