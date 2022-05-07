@@ -1,13 +1,13 @@
 <template>
-    <div class="container">
-        <button type="button" class="btn btn-primary">
-          {{ msg }}
-        </button>
-    </div>
+  <div class="container">
+    <button type="button" class="btn btn-primary">
+      {{ msg }}
+    </button>
+  </div>
 </template>
 <style>
  .container {
-     margin-top: 60px
+    margin-top: 60px
  }
 </style>
 <script>
@@ -15,9 +15,9 @@ import axios from 'axios'
 export default {
   name: 'Home',
   data() {
-      return {
-          msg: '',
-      };
+    return {
+        msg: '',
+    };
   },
   methods: {
     getMessage() {
