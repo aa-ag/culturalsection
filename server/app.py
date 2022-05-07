@@ -17,7 +17,11 @@ CORS(app, resources={r'/*': {'origins': '*'}})
 ############------------ ROUTE(S) ------------############
 @app.route('/', methods=['GET'])
 def home():
-    return jsonify('Hello World!')
+    '''
+     send over a date as a string
+     to test that things are working.
+    '''
+    return jsonify('05/07/2022')
 
 
 ############------------ DRIVER CODE ------------############
