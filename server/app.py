@@ -14,6 +14,15 @@ app.config.from_object(__name__)
 ### enable CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
 
+example_cities = [
+    {'city': 'Chicago',
+    'cosulate': 'Andorra'
+    },
+    {'city': 'Nashville',
+    'cosulate': 'Bahamas'
+    }
+]
+
 ############------------ ROUTE(S) ------------############
 @app.route('/', methods=['GET'])
 def home():
@@ -21,7 +30,10 @@ def home():
      send over a date as a string
      to test that things are working.
     '''
-    return jsonify('05/07/2022')
+    return jsonify({
+        'status': 'success',
+        'consulates': example_cities,
+    })
 
 
 ############------------ DRIVER CODE ------------############
