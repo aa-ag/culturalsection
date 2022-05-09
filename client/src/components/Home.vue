@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div v-for="(city, index) in example_cities" :key="index">
-      <p>{{ city.name }}</p>
+      <b>{{ city.name }}</b>
       <p>{{ city.consulate }}</p>
     </div>
   </div>
