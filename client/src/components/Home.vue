@@ -1,8 +1,9 @@
 <template>
   <div class="container">
-    <button type="button" class="btn btn-primary">
-      {{ msg }}
-    </button>
+    <div v-for="(city, index) in example_cities" :key="index">
+      <p>{{ city.name }}</p>
+      <p>{{ city.consulate }}</p>
+    </div>
   </div>
 </template>
 <style>
