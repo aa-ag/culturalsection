@@ -15,10 +15,10 @@ app.config.from_object(__name__)
 CORS(app, resources={r'/*': {'origins': '*'}})
 
 example_cities = [
-    {'city': 'Chicago',
+    {'name': 'Chicago',
     'cosulate': 'Andorra'
     },
-    {'city': 'Nashville',
+    {'name': 'Nashville',
     'cosulate': 'Bahamas'
     }
 ]
