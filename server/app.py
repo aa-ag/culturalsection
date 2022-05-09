@@ -16,23 +16,19 @@ CORS(app, resources={r'/*': {'origins': '*'}})
 
 example_cities = [
     {'name': 'Chicago',
-    'cosulate': 'Andorra'
+    'consulate': 'Andorra'
     },
     {'name': 'Nashville',
-    'cosulate': 'Bahamas'
+    'consulate': 'Bahamas'
     }
 ]
 
 ############------------ ROUTE(S) ------------############
 @app.route('/', methods=['GET'])
 def home():
-    '''
-     send over a date as a string
-     to test that things are working.
-    '''
     return jsonify({
         'status': 'success',
-        'consulates': example_cities,
+        'example_cities': example_cities,
     })
 
 
