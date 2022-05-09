@@ -17,7 +17,7 @@ export default {
   name: 'Home',
   data() {
     return {
-        msg: '',
+        example_cities: [],
     };
   },
   methods: {
@@ -25,7 +25,7 @@ export default {
       const path = 'http://localhost:5000/';
       axios.get(path)
         .then((res) => {
-          this.msg = res.data;
+          this.example_cities = res.data.example_cities;
         })
         .catch((error) => {
           // eslint-disable-next-line
