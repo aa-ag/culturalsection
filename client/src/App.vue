@@ -7,10 +7,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">Info</a>
+          <a router-link to="/info">Info</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Legal</a>
+          <a router-link to="/legal">Legal</a>
         </li>
       </ul>
     </div>
