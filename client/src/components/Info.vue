@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <!-- About -->
-    <div></div>
+    <div>About</div>
     <!-- Contact -->
-    <div></div>
+    <div>Contact Info</div>
   </div>
 </template>
