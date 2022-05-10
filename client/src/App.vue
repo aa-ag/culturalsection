@@ -14,8 +14,8 @@
         </li>
       </ul>
     </div>
-  </nav>
   <router-view />
+  </nav>
 </template>
 
 <style>
