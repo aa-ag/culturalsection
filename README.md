@@ -18,3 +18,4 @@ A responsive single-page app to compile events organized by consulates in differ
 - `Bootstrap`
 - `axios`
 - `aws`
+- `postgres`
