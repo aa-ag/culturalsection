@@ -11,11 +11,16 @@ A responsive single-page app to compile events organized by consulates in differ
 
 ### building blocks
 
+** infrastructure **
+- `aws`
+- `postgres`
+
+** server **
 - `Python`
 - `Flask`
+
+** client **
 - `Vue.js`
 - `Vuetifyjs`
 - `Bootstrap`
 - `axios`
-- `aws`
-- `postgres`
