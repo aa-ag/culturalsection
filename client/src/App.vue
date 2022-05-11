@@ -19,5 +19,7 @@
 </template>
 
 <style>
-
+.navbar-brand {
+  margin-left: 1rem;
+}
 </style>

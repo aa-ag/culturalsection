@@ -4,9 +4,9 @@
       <b>{{ city.name }}</b>
       <p>{{ city.consulate }}</p>
     </div> -->
-    <div class="searchContainer">
-      <form class="homeSearchBarForm">
-        <input id="homeSearchBar" type="search" placeholder="Search for cultural events in your city">
+    <div class="search-container">
+      <form class="search-form">
+        <input id="home-search-bar" type="search" placeholder="Enter a City">
       </form>
     </div>
   </div>
@@ -15,8 +15,12 @@
  .container {
     margin-top: 60px
  }
- .searchContainer .homeSearchBarForm #homeSearchBar {
-    width: 900px
+ .search-container .search-form {
+    width: 75%;
+    text-align: center;
+ }
+ #home-search-bar {
+    width: 100%;
  }
 </style>
 <script>
