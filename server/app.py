@@ -35,3 +35,11 @@ def home():
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
     app.run()
+
+
+'''
+possible to READS:
+
+https://www.digitalocean.com/community/tutorials/how-to-use-a-postgresql-database-in-a-flask-application
+
+'''
