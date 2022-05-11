@@ -1,8 +1,13 @@
 <template>
   <div class="container">
-    <div v-for="(city, index) in example_cities" :key="index">
+    <!-- <div v-for="(city, index) in example_cities" :key="index">
       <b>{{ city.name }}</b>
       <p>{{ city.consulate }}</p>
+    </div> -->
+    <div class="container">
+      <form class="home_search">
+        <input type="search" placeholder="I live in...">
+      </form>
     </div>
   </div>
 </template>
