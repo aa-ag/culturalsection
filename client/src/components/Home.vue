@@ -20,7 +20,7 @@
     text-align: center;
  }
  #home-search-bar {
-    width: 100%;
+    width: 130%;
  }
 </style>
 <script>
