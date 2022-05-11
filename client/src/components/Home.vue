@@ -4,9 +4,9 @@
       <b>{{ city.name }}</b>
       <p>{{ city.consulate }}</p>
     </div> -->
-    <div class="container">
-      <form class="home_search">
-        <input type="search" placeholder="I live in...">
+    <div class="searchContainer">
+      <form class="homeSearchBarForm">
+        <input id="homeSearchBar" type="search" placeholder="Search for cultural events in your city">
       </form>
     </div>
   </div>
@@ -14,6 +14,9 @@
 <style>
  .container {
     margin-top: 60px
+ }
+ .searchContainer .homeSearchBarForm #homeSearchBar {
+    width: 900px
  }
 </style>
 <script>
