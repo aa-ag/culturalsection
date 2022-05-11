@@ -41,5 +41,7 @@ if __name__ == "__main__":
 possible to READS:
 
 https://www.digitalocean.com/community/tutorials/how-to-use-a-postgresql-database-in-a-flask-application
+https://blog.tinystacks.com/flask-crud-api-with-postgres
+https://aws.amazon.com/getting-started/hands-on/create-connect-postgresql-db/
 
 '''
