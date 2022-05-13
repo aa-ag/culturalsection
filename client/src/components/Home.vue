@@ -1,11 +1,15 @@
 <template>
-  <form>
+  <!-- <form>
     <div class="form-group">
       <input type="input" class="form-control" id="homeSearch" aria-describedby="homeSearchHelp" placeholder="Enter a City">
       <small id="homeSearchHelp" class="form-text text-muted">Only US cities for now.</small>
     </div>
     <button type="submit" class="btn btn-primary">Search</button>
-  </form>
+  </form> -->
+  <vue-bootstrap-typeahead 
+    v-model="query"
+    :data="['Canada', 'USA', 'Mexico']"
+  />
 </template>
 <style>
  .container {
