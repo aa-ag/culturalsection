@@ -37,5 +37,16 @@ export default {
   created() {
     this.getMessage();
   },
+  props: {
+    suggestions: {
+      type: Array,
+      required: true,
+    },
+    selection: {
+      type: String,
+      required: true,
+      twoWay: true,
+    }
+  }
 };
 </script>
