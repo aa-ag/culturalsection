@@ -1,26 +1,18 @@
 <template>
-  <div class="container">
-    <!-- <div v-for="(city, index) in example_cities" :key="index">
-      <b>{{ city.name }}</b>
-      <p>{{ city.consulate }}</p>
-    </div> -->
-    <div class="search-container">
-      <form class="search-form">
-        <input id="home-search-bar" type="search" placeholder="Enter a City">
-      </form>
-    </div>
+  <form>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Select a City</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>Nashville, TN</option>
+      <option>Chicago, IL</option>
+      <option>Tampa, FL</option>
+    </select>
   </div>
+</form>
 </template>
 <style>
  .container {
     margin-top: 60px
- }
- .search-container .search-form {
-    width: 75%;
-    text-align: center;
- }
- #home-search-bar {
-    width: 130%;
  }
 </style>
 <script>
