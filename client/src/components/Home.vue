@@ -1,11 +1,7 @@
 <template>
-  
+
 </template>
-<style>
- .container {
-    margin-top: 60px
- }
-</style>
+
 <script>
 import axios from 'axios'
 export default {
