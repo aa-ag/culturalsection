@@ -1,14 +1,11 @@
 <template>
   <form>
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">Select a City</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>Nashville, TN</option>
-      <option>Chicago, IL</option>
-      <option>Tampa, FL</option>
-    </select>
-  </div>
-</form>
+    <div class="form-group">
+      <input type="input" class="form-control" id="homeSearch" aria-describedby="homeSearchHelp" placeholder="Enter a City">
+      <small id="homeSearchHelp" class="form-text text-muted">Only US cities for now.</small>
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
 </template>
 <style>
  .container {
