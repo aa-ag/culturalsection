@@ -1,13 +1,14 @@
 <template>
   <div class="container">
-    <label for="exampleDataList" class="form-label">Select a City</label>
-    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+    <label for="homeDataList" class="form-label">Select a City</label>
+    <input class="form-control" list="datalistOptions" id="homeDataList" placeholder="Type to search...">
     <datalist id="datalistOptions">
+      <option value="Chicago"></option>
       <option value="San Francisco"></option>
       <option value="New York"></option>
-      <option value="Seattle"></option>
-      <option value="Los Angeles"></option>
-      <option value="Chicago"></option>
+      <option value="Nashville"></option>
+      <option value="Miami"></option>
+      <option value="Washington, D.C."></option>
     </datalist>
   </div>
 </template>
