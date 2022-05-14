@@ -34,7 +34,7 @@
 <style>
 #datalistContainer {
   padding-top: 1.5rem;
-  padding-bottom: 16rem;
+  height: 25rem;
 }
 .divider {
   height: 2rem;
