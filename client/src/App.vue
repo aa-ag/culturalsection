@@ -20,6 +20,9 @@
 </template>
 
 <style>
+.navbar {
+  padding-bottom: 2;
+}
 .navbar-brand {
   margin-left: 1rem;
 }
