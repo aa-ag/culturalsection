@@ -16,8 +16,8 @@
     </datalist>
   </div>
   <div class="divider"></div>
-  <div class="container footer">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+  <div class="container" id="footer">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-1 my-2">
       <p class="col-md-4 mb-0 text-muted">&copy; 2022 Cultural Section, Inc</p>
 
       <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
@@ -34,7 +34,7 @@
 <style>
 #datalistContainer {
   padding-top: 1.5rem;
-  height: 25rem;
+  height: 26rem;
 }
 .divider {
   height: 2rem;
@@ -42,6 +42,9 @@
   border: solid rgba(0, 0, 0, .15);
   border-width: 1px 0;
   box-shadow: inset 0 0.5em 1.5em rgb(0 0 0 / 10%), inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
+}
+#footer {
+  width: 90%;
 }
 </style>
 

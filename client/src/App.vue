@@ -21,7 +21,9 @@
 
 <style>
 .navbar {
-  padding-bottom: 2;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  padding-right: 0.5rem;
 }
 .navbar-brand {
   margin-left: 1rem;
