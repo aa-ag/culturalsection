@@ -15,19 +15,6 @@
       <option value="Washington, D.C."></option>
     </datalist>
   </div>
-  <div class="divider"></div>
-  <div class="container mt-auto" id="footer">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-1 my-2">
-      <p class="col-md-4 mb-0 text-muted">&copy; 2022 Cultural Section, Inc</p>
-
-      <a class="btn btn-dark" href="#" role="button">Diplomatic Missions</a>
-
-      <ul class="nav col-md-4 justify-content-end">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Legal</a></li>
-      </ul>
-    </footer>
-  </div>
 </template>
 <style>
 #datalistContainer {
