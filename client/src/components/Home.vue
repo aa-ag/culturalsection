@@ -46,6 +46,9 @@
 #footer {
   width: 90%;
 }
+#footer > * {
+  font-size: small;
+}
 </style>
 
 <script>
