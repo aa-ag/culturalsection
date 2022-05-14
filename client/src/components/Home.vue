@@ -16,19 +16,11 @@
     </datalist>
   </div>
   <div class="divider"></div>
-  <div class="container">
-    <p>Work for an Embassy or a Consulate?</p>
-    <p>Click here!</p>
-    <a class="btn btn-primary" href="#" role="button">Diplomatic Offices</a>
-  </div>
-  <div class="divider"></div>
   <div class="container" id="footer">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-1 my-2">
       <p class="col-md-4 mb-0 text-muted">&copy; 2022 Cultural Section, Inc</p>
 
-      <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-      </a>
+      <a class="btn btn-outline-dark" href="#" role="button">Diplomatic Missions</a>
 
       <ul class="nav col-md-4 justify-content-end">
         <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
