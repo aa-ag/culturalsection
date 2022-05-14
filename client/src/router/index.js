@@ -4,6 +4,7 @@ import Missions from "../components/Missions.vue";
 import Login from "../components/Login.vue";
 import Signup from "../components/Signup.vue";
 import Calendar from "../components/Calendar.vue";
+import Directory from "../components/Directory.vue";
 import Help from "../components/Help.vue";
 import Contact from "../components/Contact.vue";
 import About from "../components/About.vue";
@@ -35,6 +36,11 @@ const routes = [
     path: "/calendar",
     name: "Calendar",
     component: Calendar,
+  },
+  {
+    path: "/directory",
+    name: "Directory",
+    component: Directory,
   },
   {
     path: "/help",
