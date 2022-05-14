@@ -16,11 +16,11 @@
     </datalist>
   </div>
   <div class="divider"></div>
-  <div class="container" id="footer">
+  <div class="container mt-auto" id="footer">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-1 my-2">
       <p class="col-md-4 mb-0 text-muted">&copy; 2022 Cultural Section, Inc</p>
 
-      <a class="btn btn-outline-dark" href="#" role="button">Diplomatic Missions</a>
+      <a class="btn btn-dark" href="#" role="button">Diplomatic Missions</a>
 
       <ul class="nav col-md-4 justify-content-end">
         <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
@@ -35,7 +35,7 @@
   height: 26rem;
 }
 .divider {
-  height: 2rem;
+  height: 1.1rem;
   background-color: rgba(0, 0, 0, .1);
   border: solid rgba(0, 0, 0, .15);
   border-width: 1px 0;
