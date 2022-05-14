@@ -17,3 +17,9 @@
     </form>
   </div>
 </template>
+<style>
+.container {
+  padding-top: 1.5rem;
+  height: 26rem;
+}
+</style>
