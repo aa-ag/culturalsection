@@ -13,7 +13,6 @@
           </span>
         </div>
         <input type="password" class="form-control" id="exampleInputPassword1">
-        <a href="reset" class="stretched-link">Forgot password?</a>
     </div>
     <div class="mb-3 form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
