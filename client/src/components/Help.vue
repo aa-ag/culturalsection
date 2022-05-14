@@ -10,6 +10,6 @@ Mollis pretium lorem primis senectus habitasse lectus scelerisque donec, ultrici
 <style>
 .container {
   padding-top: 1.5rem;
-  height: 26rem;
+  height: 29rem;
 }
 </style>

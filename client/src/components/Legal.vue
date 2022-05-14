@@ -7,6 +7,6 @@
 <style>
 .container {
   padding-top: 1.5rem;
-  height: 26rem;
+  height: 29rem;
 }
 </style>

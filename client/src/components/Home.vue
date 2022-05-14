@@ -16,23 +16,6 @@
   </div>
 </template>
 <style>
-#datalistContainer {
-  padding-top: 1.5rem;
-  height: 26rem;
-}
-.divider {
-  height: 1.1rem;
-  background-color: rgba(0, 0, 0, .1);
-  border: solid rgba(0, 0, 0, .15);
-  border-width: 1px 0;
-  box-shadow: inset 0 0.5em 1.5em rgb(0 0 0 / 10%), inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
-}
-#footer {
-  width: 90%;
-}
-#footer > * {
-  font-size: small;
-}
 </style>
 
 <script>

@@ -18,6 +18,9 @@ A responsive single-page app to compile events organized by consulates in differ
 **server**
 - `Python`
 - `Flask`
+- `Flask-Login`
+- `Flask-SQLAlchemy`
+- `Flask-admin`
 
 **client**
 - `Vue.js`
