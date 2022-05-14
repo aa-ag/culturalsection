@@ -13,6 +13,20 @@
       <option value="Miami"></option>
       <option value="Washington, D.C."></option>
     </datalist>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+      <label class="form-check-label" for="flexRadioDefault1">
+        Cultural Events Calendar
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+      <label class="form-check-label" for="flexRadioDefault2">
+        Embassies &amp; Consulates Directory
+      </label>
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Search</button>
   </div>
 </template>
 <style>
