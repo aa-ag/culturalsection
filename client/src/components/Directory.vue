@@ -8,6 +8,8 @@
       <input type="text" class="form-control" placeholder="the United States" aria-label="the United States">
       <button type="submit" class="btn btn-primary">Search</button>
     </div>
+    <div id="directoryHelp" class="form-text">Embassy/Country/Country or Consulate/Country/City</div>
+    <div id="directoryHelp" class="form-text">Embassy/Canada/Australia or Consulate/India/Chicago</div>
   </div>
 </template>
 <style>
