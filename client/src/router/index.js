@@ -5,6 +5,7 @@ import Help from "../components/Help.vue";
 import Contact from "../components/Contact.vue";
 import About from "../components/About.vue";
 import Legal from "../components/Legal.vue";
+import Reset from "../components/Reset.vue";
 
 const routes = [
   {
@@ -36,6 +37,11 @@ const routes = [
     path: "/legal",
     name: "Legal",
     component: Legal,
+  },
+  {
+    path: "/reset",
+    name: "Reset",
+    component: Reset,
   },
 ];
 
