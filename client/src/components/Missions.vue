@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <p>Embassies & Consulates</p>
+    <p>Embassies &amp; Consulates</p>
     <div class="mb-3">
         <p>New users</p>
         <a class="btn btn-dark" href="signup" role="button">Signup page</a>
