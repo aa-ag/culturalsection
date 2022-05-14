@@ -1,4 +1,5 @@
 <template>
+  <div class="divider"></div>
   <div class="container">
     <label for="homeDataList" class="form-label">Select a City</label>
     <input class="form-control"
@@ -14,6 +15,7 @@
       <option value="Washington, D.C."></option>
     </datalist>
   </div>
+  <div class="divider"></div>
   <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
       <p class="col-md-4 mb-0 text-muted">&copy; 2022 Cultural Section, Inc</p>
@@ -29,6 +31,16 @@
     </footer>
   </div>
 </template>
+<style>
+.divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgb(0 0 0 / 10%), inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
+}
+</style>
+
 <script>
 import axios from "axios";
 export default {
