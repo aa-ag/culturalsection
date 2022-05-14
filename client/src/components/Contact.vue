@@ -1,7 +1,7 @@
 <template>
-    <div class="container">
-        <p>info@culturalsection.com</p>
-    </div>
+  <div class="container">
+    <p>info@culturalsection.com</p>
+  </div>
 </template>
 <style>
 .container {

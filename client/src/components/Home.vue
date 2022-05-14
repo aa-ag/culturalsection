@@ -1,5 +1,4 @@
 <template>
-  <div class="divider"></div>
   <div class="container" id="datalistContainer">
     <label for="homeDataList" class="form-label">Select a City</label>
     <input class="form-control"

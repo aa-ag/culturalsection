@@ -18,6 +18,7 @@
       </ul>
     </div>
   </nav>
+  <div class="divider"></div>
   <router-view/>
   <div class="divider"></div>
   <div class="container mt-auto" id="footer">
