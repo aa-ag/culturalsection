@@ -7,6 +7,11 @@
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Password</label>
+        <div class="col-auto">
+          <span id="passwordHelpInline" class="form-text">
+            Must be 16-20 characters long.
+          </span>
+        </div>
         <input type="password" class="form-control" id="exampleInputPassword1">
     </div>
     <div class="mb-3 form-check">
