@@ -1,6 +1,6 @@
 <template>
   <div class="divider"></div>
-  <div class="container">
+  <div class="container" id="datalistContainer">
     <label for="homeDataList" class="form-label">Select a City</label>
     <input class="form-control"
       list="datalistOptions"
@@ -16,7 +16,7 @@
     </datalist>
   </div>
   <div class="divider"></div>
-  <div class="container">
+  <div class="container footer">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
       <p class="col-md-4 mb-0 text-muted">&copy; 2022 Cultural Section, Inc</p>
 
@@ -32,8 +32,12 @@
   </div>
 </template>
 <style>
+#datalistContainer {
+  padding-top: 1rem;
+  padding-bottom: 16rem;
+}
 .divider {
-  height: 3rem;
+  height: 2rem;
   background-color: rgba(0, 0, 0, .1);
   border: solid rgba(0, 0, 0, .15);
   border-width: 1px 0;
