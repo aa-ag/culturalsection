@@ -3,7 +3,7 @@
     <p>Embassies & Consulates</p>
     <div class="mb-3">
         <p>New users</p>
-        <a class="btn btn-dark" href="signup" role="button">Singup page</a>
+        <a class="btn btn-dark" href="signup" role="button">Signup page</a>
     </div>
     <div class="mb-3">
         <p>Welcome back!</p>
