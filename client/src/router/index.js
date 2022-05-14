@@ -3,6 +3,7 @@ import Home from "../components/Home.vue";
 import Missions from "../components/Missions.vue";
 import Login from "../components/Login.vue";
 import Signup from "../components/Signup.vue";
+import Calendar from "../components/Calendar.vue";
 import Help from "../components/Help.vue";
 import Contact from "../components/Contact.vue";
 import About from "../components/About.vue";
@@ -29,6 +30,11 @@ const routes = [
     path: "/signup",
     name: "Signup",
     component: Signup,
+  },
+  {
+    path: "/calendar",
+    name: "Calendar",
+    component: Calendar,
   },
   {
     path: "/help",
