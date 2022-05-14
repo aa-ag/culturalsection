@@ -15,7 +15,7 @@
           </li>
         </ul>
         <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
-          <a class="btn btn-dark" href="login" role="button">Diplomatic Missions</a>
+          <a class="btn btn-dark" href="missions" role="button">Diplomatic Missions</a>
         </ul>
       </div>
     </nav>
