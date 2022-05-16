@@ -6,12 +6,9 @@
       id="homeDataList"
       placeholder="Type to search...">
     <datalist id="datalistOptions">
-      <option value="Chicago"></option>
-      <option value="San Francisco"></option>
-      <option value="New York"></option>
-      <option value="Nashville"></option>
-      <option value="Miami"></option>
       <option value="Washington, D.C."></option>
+      <option value="Chicago"></option>
+      <option value="Nashville"></option>
     </datalist>
     <div class="form-check">
       <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>

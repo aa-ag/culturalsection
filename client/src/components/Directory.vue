@@ -9,7 +9,7 @@
       <button type="submit" class="btn btn-primary">Search</button>
     </div>
     <div id="directoryHelp" class="form-text">Embassy/Country/Country or Consulate/Country/City</div>
-    <div id="directoryHelp" class="form-text">Embassy/Canada/Australia or Consulate/India/Chicago</div>
+    <div id="directoryHelp" class="form-text"><b>for example</b>: Embassy/Canada/Australia or Consulate/India/Chicago</div>
   </div>
 </template>
 <style>
