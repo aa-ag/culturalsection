@@ -1,7 +1,7 @@
 <template>
 <div class="container">
 	<div id="calendar">
-		<h1>My Calendar</h1>
+		<h1>choosen city's calendar</h1>
 		<calendar-view
 			:show-date="showDate"
 			class="theme-default holiday-us-traditional holiday-us-official">
