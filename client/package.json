@@ -16,6 +16,7 @@
     "vue": "^3.0.0",
     "vue-bootstrap-typeahead": "^0.2.6",
     "vue-router": "^4.0.0-0",
+    "vue-simple-calendar": "^6.0.4",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
