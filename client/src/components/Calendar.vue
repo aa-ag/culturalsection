@@ -1,5 +1,5 @@
 <template>
-	<div class="container">
+	<div id="calendar">
 		<h1>My Calendar</h1>
 		<calendar-view
 			:show-date="showDate"
@@ -14,8 +14,10 @@
 </template>
 <script>
 	import { CalendarView, CalendarViewHeader } from "vue-simple-calendar"
+  import "vue-simple-calendar/dist/style.css"
+
 	export default {
-		name: 'app',
+		name: 'calendar',
 		data: function() {
 			return { showDate: new Date() }
 		},
@@ -31,8 +33,4 @@
 	}
 </script>
 <style>
-.container {
-  padding-top: 1.5rem;
-  height: 29rem;
-}
 </style>
