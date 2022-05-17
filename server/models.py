@@ -12,3 +12,12 @@ class Mission(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     country = db.Column(db.String(2), nullable=False)
     city = db.Column(db.String(3), nullable=False)
+    '''
+    - flag
+    - team
+    - address
+    - services
+    - faqs
+    - social channels
+    - contact
+    '''
