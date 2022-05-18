@@ -15,6 +15,7 @@ class Mission(db.Model):
     flag_url = db.Column(db.String(255), nullable=False)
     # team = this probably needs to be a different table
     address = db.Column(db.Text(), nullable=False)
+    phone = db.Column(db.Numeric(), nullable=False)
     '''
     - flag
     - team
