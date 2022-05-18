@@ -13,6 +13,7 @@ class Mission(db.Model):
     country = db.Column(db.String(2), nullable=False)
     city = db.Column(db.String(3), nullable=False)
     flag_url = db.Column(db.String(255), nullable=False)
+    # team = this probably needs to be a different table
     '''
     - flag
     - team
