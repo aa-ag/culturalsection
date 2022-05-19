@@ -37,3 +37,7 @@ class Human(db.Model):
 class Services(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     mission = db.Column(db.Integer, foreing_key=True, nullable=False)
+
+class FQAs(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    mission = db.Column(db.Integer, foreing_key=True, nullable=False)
