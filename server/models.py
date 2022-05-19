@@ -25,3 +25,6 @@ class Mission(db.Model):
     - social channels
     - contact
     '''
+
+class Human(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
