@@ -31,3 +31,4 @@ class Human(db.Model):
     title = db.Column(db.Text(), nullable=False)
     first_name = db.Column(db.Text(), nullable=False)
     last_name = db.Column(db.Text(), nullable=False)
+    mission = db.Column(db.Integer, foreing_key=True)
