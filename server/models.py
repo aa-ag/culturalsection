@@ -28,3 +28,6 @@ class Mission(db.Model):
 
 class Human(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.Text(), nullable=False)
+    first_name = db.Column(db.Text(), nullable=False)
+    last_name = db.Column(db.Text(), nullable=False)
