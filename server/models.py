@@ -16,6 +16,7 @@ class Mission(db.Model):
     # team = this probably needs to be a different table
     destination_address = db.Column(db.Text(), nullable=False)
     destination_phone = db.Column(db.Numeric(), nullable=False)
+    team = db.Column(db.Json(), nullable=False)
     '''
     - flag
     - team
