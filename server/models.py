@@ -29,7 +29,11 @@ class Mission(db.Model):
 
 class Human(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    mission = db.Column(db.Integer, foreing_key=True, nullable=False)
     title = db.Column(db.Text(), nullable=False)
     first_name = db.Column(db.Text(), nullable=False)
     last_name = db.Column(db.Text(), nullable=False)
+
+class Services(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
     mission = db.Column(db.Integer, foreing_key=True, nullable=False)
