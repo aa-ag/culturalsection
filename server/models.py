@@ -9,6 +9,12 @@ db = SQLAlchemy(app)
 
 ### Mission
 class Mission(db.Model):
+    '''
+     main unit in platform: mission-centric. 
+     Countries send missions to other countries, 
+     and those missions have both embassies in destination countries,
+     and consulates in other cities in destination countriesß
+    '''
     id = db.Column(db.Integer, primary_key=True)
     home_country = db.Column(db.String(2), nullable=False)
     home_country_flag_url = db.Column(db.String(255), nullable=False)
@@ -29,10 +35,15 @@ class Human(db.Model):
     first_name = db.Column(db.Text(), nullable=False)
     last_name = db.Column(db.Text(), nullable=False)
 
-class Services(db.Model):
+class Event(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    mission = db.Column(db.Integer, foreing_key=True, nullable=False)
+    title = db.Column(db.Text(), nullable=False)
+
+class Service(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     mission = db.Column(db.Integer, foreing_key=True, nullable=False)
 
-class FQAs(db.Model):
+class FQA(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     mission = db.Column(db.Integer, foreing_key=True, nullable=False)
