@@ -1,13 +1,15 @@
-#### tinkering with models for now
+############------------ IMPORTS ------------############
+from email.mime import base
+from lib2to3.pgen2 import driver
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
-### set up
+############------------ GLOBAL VARIABLE(S) ------------############
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
 db = SQLAlchemy(app)
 
-### Mission
+############------------ MODEL(S) ------------############
 class Mission(db.Model):
     '''
      main unit in platform: mission-centric. 
@@ -50,3 +52,5 @@ class Service(db.Model):
 class FQA(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     mission = db.Column(db.Integer, foreing_key=True, nullable=False)
+
+############------------ DRIVER CODE ------------############
