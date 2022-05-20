@@ -24,7 +24,7 @@ class Mission(db.Model):
     # team = this probably needs to be a different table
     destination_address = db.Column(db.Text(), nullable=False)
     destination_phone = db.Column(db.Numeric(), nullable=False)
-    team = db.Column(db.Json(), nullable=False)
+    team = db.Column(db.JSON(), nullable=False)
     
     '''
     - social channels / links
@@ -32,14 +32,14 @@ class Mission(db.Model):
 
 class Human(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    mission = db.Column(db.Integer, foreing_key=True, nullable=False)
+    mission = db.Column(db.Integer, nullable=False)
     title = db.Column(db.Text(), nullable=False)
     first_name = db.Column(db.Text(), nullable=False)
     last_name = db.Column(db.Text(), nullable=False)
 
 class Event(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    mission = db.Column(db.Integer, foreing_key=True, nullable=False)
+    mission = db.Column(db.Integer, nullable=False)
     title = db.Column(db.Text(), nullable=False)
     description = db.Column(db.Text(), nullable=False)
     when = db.Column(db.DateTime(), nullable=False)
@@ -47,11 +47,11 @@ class Event(db.Model):
 
 class Service(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    mission = db.Column(db.Integer, foreing_key=True, nullable=False)
+    mission = db.Column(db.Integer, nullable=False)
 
 class FQA(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    mission = db.Column(db.Integer, foreing_key=True, nullable=False)
+    mission = db.Column(db.Integer, nullable=False)
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
