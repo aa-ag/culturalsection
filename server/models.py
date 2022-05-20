@@ -17,14 +17,9 @@ class Mission(db.Model):
     destination_address = db.Column(db.Text(), nullable=False)
     destination_phone = db.Column(db.Numeric(), nullable=False)
     team = db.Column(db.Json(), nullable=False)
+    
     '''
-    - flag
-    - team
-    - address
-    - services
-    - faqs
-    - social channels
-    - contact
+    - social channels / links
     '''
 
 class Human(db.Model):
