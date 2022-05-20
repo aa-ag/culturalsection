@@ -54,3 +54,6 @@ class FQA(db.Model):
     mission = db.Column(db.Integer, foreing_key=True, nullable=False)
 
 ############------------ DRIVER CODE ------------############
+if __name__ == "__main__":
+    db.create_all()
+    db_app.run(debug=True)
