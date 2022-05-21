@@ -8,6 +8,7 @@ db_app = Flask(__name__)
 db_app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
 db = SQLAlchemy(db_app)
 
+
 ############------------ MODEL(S) ------------############
 class Mission(db.Model):
     '''

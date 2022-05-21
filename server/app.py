@@ -1,7 +1,7 @@
 ############------------ IMPORTS ------------############
 from flask import Flask, jsonify
 from flask_cors import CORS
-
+from flask_admin import Admin
 
 ############------------ GLOBAL VARIABLE(S) ------------###########
 ### app configuration
@@ -13,6 +13,12 @@ app.config.from_object(__name__)
 
 ### enable CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
+
+### set optional bootswatch theme
+app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
+
+admin = Admin(app, name='microblog', template_mode='bootstrap3')
+### Add administrative views here
 
 example_cities = [
     {'name': 'Chicago',
