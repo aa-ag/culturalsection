@@ -1,4 +1,5 @@
 ############------------ IMPORTS ------------############
+import sqlite3
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
