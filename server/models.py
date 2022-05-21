@@ -1,6 +1,4 @@
 ############------------ IMPORTS ------------############
-from email.mime import base
-from lib2to3.pgen2 import driver
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
