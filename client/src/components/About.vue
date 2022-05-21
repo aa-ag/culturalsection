@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1>Who we are</h1>
-    <p>blah blah blah</p>
+    <p>Cultural Section is a community of diplomatic missions providing their information to the pulic they seek to serve</p>
   </div>
 </template>
 <style>
