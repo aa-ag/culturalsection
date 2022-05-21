@@ -2,6 +2,7 @@
   <div class="container">
     <h1>Who we are</h1>
     <p>Cultural Section is a community of diplomatic missions providing their information to the pulic they seek to serve</p>
+    <p>The world, near me.</p>
   </div>
 </template>
 <style>
