@@ -13,21 +13,12 @@ app.config.from_object(__name__)
 ### enable CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
 
-example_cities = [
-    {'name': 'Chicago',
-    'consulate': 'Andorra'
-    },
-    {'name': 'Nashville',
-    'consulate': 'Bahamas'
-    }
-]
-
 ############------------ ROUTE(S) ------------############
 @app.route('/', methods=['GET'])
 def home():
     return jsonify({
         'status': 'success',
-        'example_cities': example_cities,
+        'example_cities': '',
     })
 
 
