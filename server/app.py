@@ -1,6 +1,9 @@
 ############------------ IMPORTS ------------############
 from flask import Flask, jsonify
 from flask_cors import CORS
+from settings import db_url
+from flask_migrate import Migrate
+from models import db, Mission
 
 ############------------ GLOBAL VARIABLE(S) ------------###########
 ### app configuration
