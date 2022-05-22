@@ -1,5 +1,6 @@
 ############------------ IMPORTS ------------############
 import psycopg2
+from sqlalchemy import insert
 from settings import db_url
 
 ############------------ QUERIES ------------############
@@ -29,8 +30,12 @@ def test_connection():
 
 def create_tables():
     cursor = connection.cursor()
-    cursor.execute("SELECT version();")
     cursor.execute(CREATE_MISSION_TABLE)
+    connection.close()
+
+def insert_test_mission():
+    cursor = connection.cursor()
+    cursor.execute(INSERT_MISSION)
     connection.close()
 
 
@@ -38,3 +43,4 @@ def create_tables():
 if __name__ == "__main__":
     test_connection()
     create_tables()
+    insert_test_mission()
