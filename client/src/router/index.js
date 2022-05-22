@@ -10,6 +10,7 @@ import Contact from "../components/Contact.vue";
 import About from "../components/About.vue";
 import Legal from "../components/Legal.vue";
 import Reset from "../components/Reset.vue";
+import Admin from "../components/Admin.vue";
 
 const routes = [
   {
@@ -66,6 +67,11 @@ const routes = [
     path: "/reset",
     name: "Reset",
     component: Reset,
+  },
+  {
+    path: "/admin",
+    name: "Admin",
+    component: Admin,
   },
 ];
 
