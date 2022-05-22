@@ -11,23 +11,23 @@
       - contact
      -->
     <form>
-      <div class="mb-3">
+      <div class="mb-2">
         <label for="missionInfo" class="form-label">Team</label>
         <input type="email" class="form-control" id="missionInfo" aria-describedby="emailHelp">
       </div>
-      <div class="mb-3">
+      <div class="mb-2">
         <label for="missionInfo" class="form-label">Address</label>
         <input type="email" class="form-control" id="missionInfo" aria-describedby="emailHelp">
       </div>
-      <div class="mb-3">
+      <div class="mb-2">
         <label for="missionInfo" class="form-label">Contact</label>
         <input type="email" class="form-control" id="missionInfo" aria-describedby="emailHelp">
       </div>
-      <div class="mb-3">
+      <div class="mb-2">
         <label for="missionInfo" class="form-label">Services</label>
         <input type="password" class="form-control" id="missionInfo">
       </div>
-      <div class="mb-3">
+      <div class="mb-2">
         <label for="missionInfo" class="form-label">FAQs</label>
         <input type="password" class="form-control" id="missionInfo">
       </div>
