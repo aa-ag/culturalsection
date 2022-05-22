@@ -1,7 +1,6 @@
 ############------------ IMPORTS ------------############
 from flask import Flask, jsonify
 from flask_cors import CORS
-from flask_admin import Admin
 
 ############------------ GLOBAL VARIABLE(S) ------------###########
 ### app configuration
