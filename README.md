@@ -14,6 +14,7 @@ A responsive single-page app to compile events organized by consulates in differ
 **infrastructure**
 - `aws`
 - `postgres`
+- `psycopg2-binary`
 
 **server**
 - `Python`

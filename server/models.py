@@ -1,12 +1,9 @@
 ############------------ IMPORTS ------------############
-import sqlite3
-from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
+
 ############------------ GLOBAL VARIABLE(S) ------------############
-db_app = Flask(__name__)
-db_app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
-db = SQLAlchemy(db_app)
+
 
 
 ############------------ MODEL(S) ------------############
