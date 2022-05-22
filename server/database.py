@@ -12,9 +12,14 @@ CREATE TABLE IF NOT EXISTS mission (
 );
 '''
 # query to insert one mission
-INSERT_MISSION = """
+INSERT_MISSION = '''
 INSERT INTO mission (home_country, destination_city) VALUES ('USA', 'Zug');
-"""
+'''
+
+# query to fetch all missions from the db
+QUERY_MISSIONS = '''
+SELECT * FROM mission;
+'''
 
 ############------------ GLOBAL VARIABLE(S) ------------############
 connection = psycopg2.connect(db_url)
@@ -22,21 +27,27 @@ connection = psycopg2.connect(db_url)
 
 ############------------ FUNCTION(S) ------------############
 def test_connection():
-    cursor = connection.cursor()
-    cursor.execute("SELECT version();")
-    version = cursor.fetchone()
-    print(version)
-    connection.close()
+    with connection:
+        cursor = connection.cursor()
+        cursor.execute("SELECT version();")
+        version = cursor.fetchone()
+        print(version)
 
 def create_tables():
-    cursor = connection.cursor()
-    cursor.execute(CREATE_MISSION_TABLE)
-    connection.close()
+    with connection:
+        cursor = connection.cursor()
+        cursor.execute(CREATE_MISSION_TABLE)
+    
 
 def insert_test_mission():
-    cursor = connection.cursor()
-    cursor.execute(INSERT_MISSION)
-    connection.close()
+    with connection:
+        cursor = connection.cursor()
+        cursor.execute(INSERT_MISSION)
+
+def query_mission():
+    with connection:
+        cursor = connection.cursor()
+        cursor.execute(QUERY_MISSIONS)
 
 
 ############------------ DRIVER CODE ------------############
@@ -44,3 +55,5 @@ if __name__ == "__main__":
     test_connection()
     create_tables()
     insert_test_mission()
+    query_mission()
+    connection.close()
