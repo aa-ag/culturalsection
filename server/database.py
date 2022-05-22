@@ -7,13 +7,14 @@ from settings import db_url
 # query to create the mission table
 CREATE_MISSION_TABLE = '''
 CREATE TABLE IF NOT EXISTS mission (
+    id BIGINT,
     home_country TEXT,
     destination_city TEXT
 );
 '''
 # query to insert one mission
 INSERT_MISSION = '''
-INSERT INTO mission (home_country, destination_city) VALUES ('USA', 'Zug');
+INSERT INTO mission (id, home_country, destination_city) VALUES (1, 'USA', 'Zug');
 '''
 
 # query to fetch all missions from the db

@@ -16,12 +16,24 @@ app.config.from_object(__name__)
 ### enable CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
 
+### db configuration
+app.config['SQLALCHEMY_DATABASE_URI'] = db_url
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+ 
+db.init_app(app)
+migrate = Migrate(app, db)
+
 ############------------ ROUTE(S) ------------############
 @app.route('/', methods=['GET'])
 def home():
+    q = Mission.query.all() 
+
+    for i in q:
+        c = f"Diplomatic mission from {i.home_country} in {i.destination_city}"
+
     return jsonify({
         'status': 'success',
-        'example_cities': '',
+        'example_cities': f'{c}',
     })
 
 

@@ -1,6 +1,7 @@
 <template>
   <div class="container" id="datalistContainer">
-    <label for="homeDataList" class="form-label">Select a City</label>
+    <p>{{ example_cities }}</p>
+    <!-- <label for="homeDataList" class="form-label">Select a City</label>
     <input class="form-control"
       list="datalistOptions"
       id="homeDataList"
@@ -23,7 +24,7 @@
       </label>
     </div>
   
-    <button type="submit" class="btn btn-primary">Search</button>
+    <button type="submit" class="btn btn-primary">Search</button> -->
   </div>
 </template>
 <style>
@@ -35,7 +36,7 @@ export default {
   name: "Home",
   data() {
     return {
-        example_cities: [],
+        example_cities: '',
     };
   },
   methods: {
