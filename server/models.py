@@ -58,4 +58,3 @@ class FQA(db.Model):
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
     db.create_all()
-    db_app.run(debug=True)
