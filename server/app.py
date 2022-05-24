@@ -1,4 +1,5 @@
 ############------------ IMPORTS ------------############
+from crypt import methods
 from flask import Flask, jsonify
 from flask_cors import CORS
 from settings import db_url
@@ -37,6 +38,10 @@ def home():
         'example_cities': f'{msg}',
     })
 
+
+@app.route('/addmission', methods=['GET', 'POST'])
+def add_mission(data):
+    pass
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
