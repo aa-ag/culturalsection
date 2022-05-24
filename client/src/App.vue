@@ -20,7 +20,7 @@
             <a class="nav-link" href="contact">Contact</a>
           </li>
         </ul>
-        <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+        <ul class="navbar-nav flex-row flex-wrap ml-auto">
           <a class="btn btn-dark" href="missions" role="button">Diplomatic Missions</a>
         </ul>
       </div>
