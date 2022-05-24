@@ -1,59 +1,23 @@
 <template>
-  <div class="container" id="datalistContainer">
-    <p>{{ example_cities }}</p>
-    <!-- <label for="homeDataList" class="form-label">Select a City</label>
-    <input class="form-control"
-      list="datalistOptions"
-      id="homeDataList"
-      placeholder="Type to search...">
-    <datalist id="datalistOptions">
-      <option value="Washington, D.C."></option>
-      <option value="Chicago"></option>
-      <option value="Nashville"></option>
-    </datalist>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-      <label class="form-check-label" for="flexRadioDefault1">
-        Cultural Events Calendar
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-      <label class="form-check-label" for="flexRadioDefault2">
-        Embassies &amp; Consulates Directory
-      </label>
-    </div>
-  
-    <button type="submit" class="btn btn-primary">Search</button> -->
+  <div class="container">
+    <label for="input-with-list">Pick a city</label>
+    <b-form-input list="input-list" id="input-with-list"></b-form-input>
+    <b-form-datalist id="input-list" :options="options"></b-form-datalist>
+    <button type="submit" class="btn btn-primary">View Calendar</button>
   </div>
 </template>
 <style>
+.container {
+  padding-top: 1.5rem;
+  height: 29rem;
+}
 </style>
-
 <script>
-import axios from "axios";
 export default {
-  name: "Home",
   data() {
     return {
-        example_cities: '',
+      options: ['Nashville', 'Chicago', 'Miami', 'Washington, D.C.', 'New York'],
     };
-  },
-  methods: {
-    getMessage() {
-      const path = "http://localhost:5000/";
-      axios.get(path)
-        .then((res) => {
-          this.example_cities = res.data.example_cities;
-        })
-        .catch((error) => {
-          // eslint-disable-next-line
-          console.error(error)
-        });
-    },
-  },
-  created() {
-    this.getMessage();
   },
 };
 </script>
