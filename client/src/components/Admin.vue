@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    
+    <p>{{ example_cities }}</p>
   </div>
 </template>
 <style>
@@ -10,31 +10,30 @@
 }
 </style>
 <script>
-import axios from "axios";
-export default{
-  data(){
+import axios from 'axios';
+
+export default {
+  name: 'Home',
+  data() {
     return {
-      add: {
-       home_country: "",
-       destination_city: "",
-      },
+      example_cities: '',
     };
   },
   methods: {
-    submit:function() {
-      const path = 'http://127.0.0.1:5000/add'
-      axios.post(path, {
-        name: this.add.home_country,
-        department: this.add.destination_city,
-        }
-      )
-      .then(response => {
-        console.log(response);
-      })
-      .catch(err =>{
-        console.log(err);
-      });
+    getMessage() {
+      const path = 'http://localhost:5000/';
+      axios.get(path)
+        .then((res) => {
+          this.example_cities = res.data.example_cities;
+        })
+        .catch((error) => {
+          // eslint-disable-next-line
+          console.error(error)
+        });
     },
-  }
-}
+  },
+  created() {
+    this.getMessage();
+  },
+};
 </script>
