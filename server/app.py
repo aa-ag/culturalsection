@@ -28,12 +28,13 @@ migrate = Migrate(app, db)
 def home():
     q = Mission.query.all() 
 
+    msg = ''
     for i in q:
-        c = f"Diplomatic mission from {i.home_country} in {i.destination_city}"
+        msg += f"Diplomatic mission from {i.home_country} in {i.destination_city}"
 
     return jsonify({
         'status': 'success',
-        'example_cities': f'{c}',
+        'example_cities': f'{msg}',
     })
 
 
