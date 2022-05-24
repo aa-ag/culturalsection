@@ -41,7 +41,9 @@ def home():
 
 @app.route('/add', methods=['GET', 'POST'])
 def add_mission(data):
-    pass
+    print('GOT IT')
+    print(data)
+
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
