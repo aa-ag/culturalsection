@@ -39,7 +39,7 @@ def home():
     })
 
 
-@app.route('/addmission', methods=['GET', 'POST'])
+@app.route('/add', methods=['GET', 'POST'])
 def add_mission(data):
     pass
 
