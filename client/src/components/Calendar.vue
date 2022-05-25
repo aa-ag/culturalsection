@@ -1,8 +1,6 @@
 <template>
   <div class="container">
-    <ul>
-      <li v-for="m in missions"  v-bind:key="m">{{ m }} </li>
-    </ul>
+    {{ missions }}
   </div>
 </template>
 <style>
