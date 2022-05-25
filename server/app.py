@@ -1,6 +1,4 @@
 ############------------ IMPORTS ------------############
-from crypt import methods
-from flask import Flask, jsonify
 from flask_cors import CORS
 from settings import db_url
 from flask_migrate import Migrate
@@ -39,10 +37,12 @@ def home():
     })
 
 
-@app.route('/add', methods=['GET', 'POST'])
-def add_mission(data):
+@app.route('/admin', methods=['GET', 'POST'])
+def add_mission():
     print('GOT IT')
-    print(data)
+    return jsonify({
+        'status': 'success'
+    })
 
 
 ############------------ DRIVER CODE ------------############
