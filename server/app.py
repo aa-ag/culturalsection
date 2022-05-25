@@ -40,15 +40,11 @@ def home():
 
 @app.route('/admin', methods=['GET', 'POST'])
 def add_mission():
-    # print(request)
-    # return jsonify({
-    #     'status': 'success'
-    # })
     response_object = {'status': 'success'}
     if request.method == 'POST':
         post_data = request.get_json()
-        print(post_data)
-        # mission = Mission(request.home_country,request.destination_city)
+        print(post_data["homecountry"],post_data["destinationcity"])
+        # mission = Mission(post_data.home_country,post_data.destination_city)
         # db.session.add(mission)
         # db.session.commit()
         # response_object['message'] = 'Mission added!'
