@@ -40,10 +40,19 @@ def home():
 
 @app.route('/admin', methods=['GET', 'POST'])
 def add_mission():
-    print('GOT IT')
-    return jsonify({
-        'status': 'success'
-    })
+    # print(request)
+    # return jsonify({
+    #     'status': 'success'
+    # })
+    response_object = {'status': 'success'}
+    if request.method == 'POST':
+        post_data = request.get_json()
+        print(post_data)
+        # mission = Mission(request.home_country,request.destination_city)
+        # db.session.add(mission)
+        # db.session.commit()
+        # response_object['message'] = 'Mission added!'
+    return jsonify(response_object)
 
 
 ############------------ DRIVER CODE ------------############
