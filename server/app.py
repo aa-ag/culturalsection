@@ -4,6 +4,7 @@ from flask_cors import CORS
 from settings import db_url
 from flask_migrate import Migrate
 from models import db, Mission
+import psycopg2
 
 ############------------ GLOBAL VARIABLE(S) ------------###########
 ### app configuration
@@ -24,7 +25,7 @@ db.init_app(app)
 migrate = Migrate(app, db)
 
 ############------------ ROUTE(S) ------------############
-@app.route('/', methods=['GET'])
+@app.route('/calendar', methods=['GET'])
 def home():
     q = Mission.query.all() 
 
@@ -43,11 +44,15 @@ def add_mission():
     response_object = {'status': 'success'}
     if request.method == 'POST':
         post_data = request.get_json()
-        print(post_data["homecountry"],post_data["destinationcity"])
-        # mission = Mission(post_data.home_country,post_data.destination_city)
-        # db.session.add(mission)
-        # db.session.commit()
-        # response_object['message'] = 'Mission added!'
+        connection = psycopg2.connect(db_url)
+        with connection:
+            cursor = connection.cursor()
+            cursor.execute(
+                'INSERT INTO mission (home_country, destination_city) VALUES (%s, %s)',
+                (post_data["homecountry"],post_data["destinationcity"])
+            )
+
+        response_object['message'] = 'Mission added!'
     return jsonify(response_object)
 
 
