@@ -7,7 +7,7 @@ from settings import db_url
 # query to create the mission table
 CREATE_MISSION_TABLE = '''
 CREATE TABLE IF NOT EXISTS mission (
-    id BIGINT,
+    id BIGSERIAL PRIMARY KEY,
     home_country TEXT,
     destination_city TEXT
 );

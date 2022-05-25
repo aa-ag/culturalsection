@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <p>{{ example_cities }}</p>
+    {{ missions }}
   </div>
 </template>
 <style>
@@ -13,18 +13,18 @@
 import axios from 'axios';
 
 export default {
-  name: 'Home',
+  name: 'Calendar',
   data() {
     return {
-      example_cities: '',
+      missions: '',
     };
   },
   methods: {
     getMessage() {
-      const path = 'http://localhost:5000/';
+      const path = 'http://localhost:5000/calendar';
       axios.get(path)
         .then((res) => {
-          this.example_cities = res.data.example_cities;
+          this.missions = res.data.missions;
         })
         .catch((error) => {
           // eslint-disable-next-line
