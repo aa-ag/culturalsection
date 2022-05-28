@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <b-navbar toggleable="lg" type="navbar-dark bg-dark" variant="info">
+    <b-navbar toggleable="lg" type="dark" variant="info">
       <b-navbar-brand href="/">Cultural Section</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
