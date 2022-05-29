@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    {{ missions }}
+    <div>{{ count }}</div>
+    <div>{{ missions }}</div>
   </div>
 </template>
 <style>
@@ -24,6 +25,7 @@ export default {
       const path = 'http://localhost:5000/calendar';
       axios.get(path)
         .then((res) => {
+          this.count = res.data.count;
           this.missions = res.data.missions;
         })
         .catch((error) => {
