@@ -20,15 +20,9 @@
     <div class="divider"></div>
     <router-view/>
     <div class="divider"></div>
-    <div class="footer" id="footer">
-      <footer class="d-flex flex-wrap justify-content-between align-items-center">
-        <p class="col-md-4 mb-0 text-muted">&copy; 2022</p>
-        <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item"><a href="about" class="nav-link px-2 text-muted">About</a></li>
-          <li class="nav-item"><a href="legal" class="nav-link px-2 text-muted">Legal</a></li>
-        </ul>
-      </footer>
-    </div>
+    <footer class="fixed-bottom">
+      <div class="text-center p3">&copy; 2022</div>
+    </footer>
   </div>
 </template>
 <style>
@@ -39,12 +33,6 @@
 }
 .navbar-brand {
   margin-left: 1rem;
-}
-footer {
-  padding: 1rem;
-}
-.footer {
-  font-size: small;
 }
 .divider {
   height: 1.1rem;
