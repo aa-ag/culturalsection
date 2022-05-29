@@ -1,7 +1,6 @@
 ############------------ IMPORTS ------------############
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-from settings import db_url
 from flask_migrate import Migrate
 from models import db, Mission
 import psycopg2
@@ -18,11 +17,6 @@ app.config.from_object(__name__)
 ### enable CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
 
-### db configuration
-app.config['SQLALCHEMY_DATABASE_URI'] = db_url
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
- 
-db = create_engine(db_url)
 
 ############------------ ROUTE(S) ------------############
 @app.route('/calendar', methods=['GET'])

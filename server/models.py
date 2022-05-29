@@ -1,8 +1,13 @@
 ############------------ IMPORTS ------------############
+from app import app
 from flask_sqlalchemy import SQLAlchemy
 
 
 ############------------ GLOBAL VARIABLE(S) ------------############
+### db configuration
+app.config['SQLALCHEMY_DATABASE_URI'] = db_url
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 db = SQLAlchemy()
 
 
@@ -12,7 +17,7 @@ class Mission(db.Model):
      main unit in platform: mission-centric. 
      Countries send missions to other countries, 
      and those missions have both embassies in destination countries,
-     and consulates in other cities in destination countriesß
+     and consulates in other cities in destination countries
     '''
     __tablename__ = 'mission'
     
