@@ -25,7 +25,6 @@ A responsive single-page app to compile events organized by consulates in differ
 
 **client**
 - `Vue.js`
-- `vue-simple-calendar`
 - `Bootstrap`
-- `npm install bootstrap-vue`
-- `axios`
+- `Bootstrap-Vue`
+- `Axios`
