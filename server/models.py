@@ -1,15 +1,7 @@
 ############------------ IMPORTS ------------############
 from app import app
-from settings import db_url
-from flask_sqlalchemy import SQLAlchemy
-
 
 ############------------ GLOBAL VARIABLE(S) ------------############
-### db configuration
-app.config['SQLALCHEMY_DATABASE_URI'] = db_url
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-db = SQLAlchemy(app)
 
 
 ############------------ MODEL(S) ------------############
