@@ -1,5 +1,6 @@
 ############------------ IMPORTS ------------############
 from app import app
+from settings import db_url
 from flask_sqlalchemy import SQLAlchemy
 
 
