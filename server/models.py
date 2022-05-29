@@ -26,11 +26,8 @@ class Mission(db.Model):
     team = db.Column(db.JSON(), nullable=False)
     social_links = db.Column(db.JSON(), nullable=False)
 
-    def __init__(self):
-        pass
-
     def __repr__(self):
-        pass
+        return f"Mission from {self.home_country} to {self.destination_city}."
 
 class Human(db.Model):
     id = db.Column(db.Integer, primary_key=True)
