@@ -70,11 +70,20 @@ class Service(db.Model):
 class FQA(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     mission = db.Column(db.Integer, nullable=False)
-    
+
 ############------------ ROUTE(S) ------------############
 @app.route('/calendar', methods=['GET'])
 def calendar():
-    pass
+    if request.method == 'GET':
+        missions_query = Mission.query.all()
+        all_missions = [
+            {
+                "home_country": mission.home_country,
+                "destination_city": mission.destination_city
+            } for mission in missions_query
+        ]
+        return {"count": len(all_missions), "missions": all_missions}
+
 
 
 @app.route('/admin', methods=['GET', 'POST'])
