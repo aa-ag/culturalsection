@@ -9,7 +9,7 @@ from flask_sqlalchemy import SQLAlchemy
 app.config['SQLALCHEMY_DATABASE_URI'] = db_url
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-db = SQLAlchemy()
+db = SQLAlchemy(app)
 
 
 ############------------ MODEL(S) ------------############
