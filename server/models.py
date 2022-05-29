@@ -1,5 +1,6 @@
 ############------------ IMPORTS ------------############
-from app import app
+from app import db
+from sqlalchemy.dialects.postgresql import JSON
 
 ############------------ GLOBAL VARIABLE(S) ------------############
 
@@ -26,6 +27,7 @@ class Mission(db.Model):
 
     def __repr__(self):
         return f"Mission from {self.home_country} to {self.destination_city}."
+
 
 class Human(db.Model):
     id = db.Column(db.Integer, primary_key=True)
