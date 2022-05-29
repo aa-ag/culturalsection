@@ -1,3 +1,7 @@
+# db stuff
+migrations
+migrations/*
+
 .DS_Store
 node_modules
 /dist
