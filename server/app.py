@@ -3,7 +3,7 @@ from flask import Flask, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
 from settings import db_url
 from flask_cors import CORS
-
+from flask_migrate import Migrate
 
 ############------------ GLOBAL VARIABLE(S) ------------###########
 ### app configuration
@@ -18,6 +18,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = db_url
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
+migrate = Migrate(app, db)
 
 ### enable CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
