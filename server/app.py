@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from settings import db_url
 from flask_cors import CORS
 from flask_migrate import Migrate
+from models import *
 
 ############------------ GLOBAL VARIABLE(S) ------------###########
 ### app configuration
