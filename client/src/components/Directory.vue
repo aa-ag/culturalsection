@@ -23,3 +23,41 @@
   height: 29rem;
 }
 </style>
+<script>
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      addMissionForm: {
+        homecountry: '',
+      },
+    };
+  },
+  methods: {
+    addMission(payload) {
+      const path = 'http://localhost:5000/admin';
+      axios.post(path, payload)
+        .catch((error) => {
+          // eslint-disable-next-line
+          console.log(error);
+        });
+    },
+    initForm() {
+      this.addMissionForm.homecountry = '';
+    },
+    onSubmit(evt) {
+      evt.preventDefault();
+      const payload = {
+        homecountry: this.addMissionForm.homecountry,
+      };
+      this.addMission(payload);
+      this.initForm();
+    },
+    onReset(evt) {
+      evt.preventDefault();
+      this.initForm();
+    },
+  },
+};
+</script>
