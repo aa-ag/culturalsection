@@ -8,7 +8,7 @@
         <b-form-input
           id="form-homecountry-input"
           type="text"
-          v-model="addMissionForm.homecountry"
+          v-model="getMissionsForm.homecountry"
           required
           placeholder="Enter your mission's home country">
         </b-form-input>
@@ -29,29 +29,29 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      addMissionForm: {
+      getMissionsForm: {
         homecountry: '',
       },
     };
   },
   methods: {
-    addMission(payload) {
-      const path = 'http://localhost:5000/admin';
-      axios.post(path, payload)
+    getMissions(payload) {
+      const path = 'http://localhost:5000/directory';
+      axios.get(path, payload)
         .catch((error) => {
           // eslint-disable-next-line
           console.log(error);
         });
     },
     initForm() {
-      this.addMissionForm.homecountry = '';
+      this.getMissionsForm.homecountry = '';
     },
     onSubmit(evt) {
       evt.preventDefault();
       const payload = {
-        homecountry: this.addMissionForm.homecountry,
+        homecountry: this.getMissionsForm.homecountry,
       };
-      this.addMission(payload);
+      this.getMissions(payload);
       this.initForm();
     },
     onReset(evt) {
