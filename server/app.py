@@ -91,8 +91,8 @@ def add_mission():
     if request.method == 'POST':
         data = request.get_json()
         new_mission = Mission(
-            home_country=data["homecountry"],
-            destination_city=data["destinationcity"],
+            home_country=data["home_country"],
+            destination_city=data["destination_city"],
         )
         db.session.add(new_mission)
         db.session.commit()
