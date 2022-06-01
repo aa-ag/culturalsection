@@ -1,15 +1,20 @@
 <template>
   <div class="container">
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Embassy or Consulate" aria-label="Embassy or Consulate">
-      <span class="input-group-text">of</span>
-      <input type="text" class="form-control" placeholder="Canada" aria-label="Canada">
-      <span class="input-group-text">in</span>
-      <input type="text" class="form-control" placeholder="the United States" aria-label="the United States">
-      <button type="submit" class="btn btn-primary">Search</button>
-    </div>
-    <div id="directoryHelp" class="form-text">Embassy/Country/Country or Consulate/Country/City</div>
-    <div id="directoryHelp" class="form-text"><b>for example</b>: Embassy/Canada/Australia or Consulate/India/Chicago</div>
+    <b-form @submit="onSubmit" @reset="onReset" class="w-100">
+      <b-form-group
+        id="form-homecountry-group"
+        label="Home country"
+        label-for="form-homecountry-input">
+        <b-form-input
+          id="form-homecountry-input"
+          type="text"
+          v-model="addMissionForm.homecountry"
+          required
+          placeholder="Enter your mission's home country">
+        </b-form-input>
+      </b-form-group>
+      <b-button type="search" variant="primary">Search</b-button>
+    </b-form>
   </div>
 </template>
 <style>
