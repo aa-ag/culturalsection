@@ -16,7 +16,7 @@
       <b-button type="submit" variant="primary">Search</b-button>
     </b-form>
     <div>
-      {{ homecountry }}
+      {{ hc }}
     </div>
   </div>
 </template>
@@ -27,46 +27,10 @@
 }
 </style>
 <script>
-import axios from 'axios';
+const axios = require('axios');
 
-export default {
-  data() {
-    return {
-      getMissionForm: {
-        homecountry: '',
-      },
-    };
-  },
-  methods: {
-    getMission(payload) {
-      const path = 'http://localhost:5000/directory';
-      axios.get(path, payload)
-        .then((res) => {
-          this.homecountry = res.data.homecountry;
-        })
-        .catch((error) => {
-          // eslint-disable-next-line
-          console.log(error);
-        });
-    },
-    initForm() {
-      this.getMissionForm.homecountry = '';
-    },
-    onSubmit(evt) {
-      evt.preventDefault();
-      const payload = {
-        homecountry: this.getMissionForm.homecountry,
-      };
-      this.getMission(payload);
-      this.initForm();
-    },
-    onReset(evt) {
-      evt.preventDefault();
-      this.initForm();
-    },
-  },
-  created() {
-    this.getMission();
-  },
-};
+axios.get('http://localhost:5000/calendar').then(resp => {
+
+    console.log(resp.data);
+});
 </script>
