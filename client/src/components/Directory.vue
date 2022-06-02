@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <!-- <b-form @submit="onSubmit" @reset="onReset" class="w-100">
+    <b-form @submit="onSubmit" @reset="onReset" class="w-100">
       <b-form-group
         id="form-homecountry-group"
         label="Home country"
@@ -14,7 +14,7 @@
         </b-form-input>
       </b-form-group>
       <b-button type="submit" variant="primary">Search</b-button>
-    </b-form> -->
+    </b-form>
     <div>{{ missions }}</div>
   </div>
 </template>
@@ -28,16 +28,16 @@
 import axios from 'axios';
 
 export default {
-  name: 'Calendar',
+  name: 'Directory',
   data() {
     return {
       missions: '',
     };
   },
   methods: {
-    getMission() {
+    getMission(payload) {
       const path = 'http://localhost:5000/directory';
-      axios.get(path)
+      axios.get(path, payload)
         .then((res) => {
           this.missions = res.data.missions;
         })
@@ -46,9 +46,21 @@ export default {
           console.error(error)
         });
     },
-  },
-  created() {
-    this.getMission();
+    initForm() {
+      this.getMissionForm.homecountry = '';
+    },
+    onSubmit(evt) {
+      evt.preventDefault();
+      const payload = {
+        homecountry: this.getMissionForm.homecountry,
+      };
+      this.addMission(payload);
+      this.initForm();
+    },
+    onReset(evt) {
+      evt.preventDefault();
+      this.initForm();
+    },
   },
 };
 </script>
