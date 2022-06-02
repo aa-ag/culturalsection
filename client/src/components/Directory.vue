@@ -15,6 +15,9 @@
       </b-form-group>
       <b-button type="search" variant="primary">Search</b-button>
     </b-form>
+    <div>
+      {{  }}
+    </div>
   </div>
 </template>
 <style>
@@ -35,9 +38,9 @@ export default {
     };
   },
   methods: {
-    addMission(payload) {
+    getMission() {
       const path = 'http://localhost:5000/directory';
-      axios.get(path, payload)
+      axios.get(path)
         .then((res) => {
           this.results = res.data.results;
         })
@@ -54,7 +57,7 @@ export default {
       const payload = {
         homecountry: this.getMissionForm.homecountry,
       };
-      this.addMission(payload);
+      this.getMission();
       this.initForm();
     },
     onReset(evt) {
