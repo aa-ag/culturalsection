@@ -13,7 +13,7 @@
           placeholder="Enter your mission's home country">
         </b-form-input>
       </b-form-group>
-      <b-button type="search" variant="primary">Search</b-button>
+      <b-button type="submit" variant="primary">Search</b-button>
     </b-form>
     <div>
       {{  }}
