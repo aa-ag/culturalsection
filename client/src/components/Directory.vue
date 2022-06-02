@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <b-form @submit="onSubmit" @reset="onReset" class="w-100">
+    <!-- <b-form @submit="onSubmit" @reset="onReset" class="w-100">
       <b-form-group
         id="form-homecountry-group"
         label="Home country"
@@ -14,10 +14,8 @@
         </b-form-input>
       </b-form-group>
       <b-button type="submit" variant="primary">Search</b-button>
-    </b-form>
-    <div>
-      {{ hc }}
-    </div>
+    </b-form> -->
+    <div>{{ missions }}</div>
   </div>
 </template>
 <style>
@@ -27,10 +25,30 @@
 }
 </style>
 <script>
-const axios = require('axios');
+import axios from 'axios';
 
-axios.get('http://localhost:5000/calendar').then(resp => {
-
-    console.log(resp.data);
-});
+export default {
+  name: 'Calendar',
+  data() {
+    return {
+      missions: '',
+    };
+  },
+  methods: {
+    getMission() {
+      const path = 'http://localhost:5000/directory';
+      axios.get(path)
+        .then((res) => {
+          this.missions = res.data.missions;
+        })
+        .catch((error) => {
+          // eslint-disable-next-line
+          console.error(error)
+        });
+    },
+  },
+  created() {
+    this.getMission();
+  },
+};
 </script>
