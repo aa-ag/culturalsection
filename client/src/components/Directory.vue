@@ -16,7 +16,7 @@
       <b-button type="submit" variant="primary">Search</b-button>
     </b-form>
     <div>
-      {{  }}
+      {{ homecountry }}
     </div>
   </div>
 </template>
@@ -38,11 +38,11 @@ export default {
     };
   },
   methods: {
-    getMission() {
+    getMission(payload) {
       const path = 'http://localhost:5000/directory';
-      axios.get(path)
+      axios.get(path, payload)
         .then((res) => {
-          this.results = res.data.results;
+          this.homecountry = res.data.homecountry;
         })
         .catch((error) => {
           // eslint-disable-next-line
@@ -57,13 +57,16 @@ export default {
       const payload = {
         homecountry: this.getMissionForm.homecountry,
       };
-      this.getMission();
+      this.getMission(payload);
       this.initForm();
     },
     onReset(evt) {
       evt.preventDefault();
       this.initForm();
     },
+  },
+  created() {
+    this.getMission();
   },
 };
 </script>
