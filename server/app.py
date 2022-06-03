@@ -75,10 +75,10 @@ class FQA(db.Model):
 @app.route('/calendar', methods=['GET'])
 def calendar():
     if request.method == 'GET':
-        missions_query = Mission.filter.query(
+        missions_query = Mission.query.filter(
             Mission.home_country == "USA"
         ).all()
-        
+
         all_missions = [
             {
                 "home_country": mission.home_country,
