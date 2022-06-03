@@ -101,6 +101,7 @@ def add_mission():
 
 @app.route('/directory', methods=['GET'])
 def directory():
+    print("(:w")
     if request.method == 'GET':
         data = request.get_json()
         return {"missions": ":)"}

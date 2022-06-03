@@ -22,8 +22,8 @@
     <div class="divider"></div>
     <footer class="fixed-bottom">
       <div class="text-center p3">&copy; 2022</div>
-      <div class="text-center p3">Legal</div>
-      <div class="text-center p3">About</div>
+      <div class="text-center p3 muted" href="/legal" >Legal</div>
+      <div class="text-center p3 muted">About</div>
     </footer>
   </div>
 </template>
