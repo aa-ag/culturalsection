@@ -103,7 +103,6 @@ def add_mission():
 def directory():
     if request.method == 'GET':
         data = request.get_json()
-        print(data)
         return {"missions": ":)"}
 
 ############------------ DRIVER CODE ------------############

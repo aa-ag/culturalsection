@@ -35,9 +35,9 @@ export default {
     };
   },
   methods: {
-    getMission(payload) {
+    getMission() {
       const path = 'http://localhost:5000/directory';
-      axios.get(path, payload)
+      axios.post(path, { query: String(this.homecountry) })
         .then((res) => {
           this.missions = res.data.missions;
         })
