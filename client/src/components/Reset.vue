@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <h1>Reset password</h1>
-    <p>blah blah blah</p>
   </div>
 </template>
 <style>
