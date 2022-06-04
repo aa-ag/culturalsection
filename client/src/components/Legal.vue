@@ -1,7 +1,6 @@
 <template>
   <div class="container">
-    <h1>How to sue us</h1>
-    <p>blah blah blah</p>
+    <h1>Legal</h1>
   </div>
 </template>
 <style>
