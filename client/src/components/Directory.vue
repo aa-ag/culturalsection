@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <b-form @submit="onSubmit" @reset="onReset" class="w-100">
+    <!-- <b-form @submit="onSubmit" @reset="onReset" class="w-100">
       <b-form-group
         id="form-homecountry-group"
         label="Home country"
@@ -14,7 +14,7 @@
         </b-form-input>
       </b-form-group>
       <b-button type="submit" variant="primary">Search</b-button>
-    </b-form>
+    </b-form> -->
     <div>{{ missions }}</div>
   </div>
 </template>
@@ -35,10 +35,11 @@ export default {
     };
   },
   methods: {
-    getMission() {
+    getMissions() {
       const path = 'http://localhost:5000/directory';
-      axios.post(path, { query: String(this.homecountry) })
+      axios.get(path)
         .then((res) => {
+          this.count = res.data.count;
           this.missions = res.data.missions;
         })
         .catch((error) => {
@@ -46,21 +47,9 @@ export default {
           console.error(error)
         });
     },
-    initForm() {
-      this.getMissionForm.homecountry = '';
-    },
-    onSubmit(evt) {
-      evt.preventDefault();
-      const payload = {
-        homecountry: this.getMissionForm.homecountry,
-      };
-      this.addMission(payload);
-      this.initForm();
-    },
-    onReset(evt) {
-      evt.preventDefault();
-      this.initForm();
-    },
+  },
+  created() {
+    this.getMissions();
   },
 };
 </script>
