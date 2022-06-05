@@ -15,7 +15,8 @@
     </b-form-group>
     <b-button type="submit" variant="primary">Submit</b-button>
     </b-form>
-    <div class="mt-2">{{ result }}</div>
+    <div>{{ count }}</div>
+    <div>{{ missions }}</div>
   </div>
 </template>
 <style>
@@ -41,7 +42,8 @@ export default {
       const path = 'http://localhost:5000/directory';
       axios.post(path, payload)
         .then((res) => {
-          this.result = res.data.result;
+          this.count = res.data.count;
+          this.missions = res.data.missions;
         })
         .catch((error) => {
           // eslint-disable-next-line
