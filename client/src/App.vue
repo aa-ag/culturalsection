@@ -23,7 +23,7 @@
     <footer class="fixed-bottom">
       <div class="mb4">
         <div class="text-center p4">&copy; 2022</div>
-        <div class="text-center">
+        <div class="text-center" id="more">
           <a href="/legal">Legal</a>
           <a href="/about">About</a>
         </div>
@@ -46,5 +46,10 @@
   border: solid rgba(0, 0, 0, .15);
   border-width: 1px 0;
   box-shadow: inset 0 0.5em 1.5em rgb(0 0 0 / 10%), inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
+}
+
+#more > * {
+  padding: 0.25rem;
+  color: rgba(166, 166, 166, 0.871);
 }
 </style>
