@@ -104,8 +104,8 @@ def add_mission():
 def directory():
     if request.method == 'POST':
         data = request.get_json()
-        print(data["home_country"].title())
-        return {"status": "success", "result": f"{data['home_country']}"}
+        result = data["home_country"].title()
+        return {"status": "success", "result": result}
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
