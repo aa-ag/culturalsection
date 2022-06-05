@@ -39,7 +39,7 @@ export default {
   methods: {
     getMission(payload) {
       const path = 'http://localhost:5000/directory';
-      axios.get(path, payload)
+      axios.post(path, payload)
         .catch((error) => {
           // eslint-disable-next-line
           console.log(error);

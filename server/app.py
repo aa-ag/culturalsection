@@ -100,11 +100,12 @@ def add_mission():
         return {"message": "new mission added!"}
 
 
-@app.route('/directory', methods=['GET'])
+@app.route('/directory', methods=['GET', 'POST'])
 def directory():
-    if request.method == 'GET':
-        print(request.get_json())
-        return {"status": "success"}
+    if request.method == 'POST':
+        data = request.get_json()
+        print(data)
+        return {"result": "success"}
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
