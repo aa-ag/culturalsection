@@ -12,4 +12,12 @@
 }
 </style>
 <script>
+export default {
+  name: 'Directory',
+  data() {
+    return {
+      text: '',
+    };
+  },
+};
 </script>
