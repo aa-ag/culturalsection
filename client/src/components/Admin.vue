@@ -20,7 +20,7 @@
           <b-form-input
             id="form-destinationcity-input"
             type="text"
-            v-model="addMissionForm.destinationcity"
+            v-model="addMissionForm.destination_city"
             required
             placeholder="Enter your mission's destination city">
           </b-form-input>
@@ -43,7 +43,7 @@ export default {
     return {
       addMissionForm: {
         home_country: '',
-        destinationcity: '',
+        destination_city: '',
       },
     };
   },
@@ -58,13 +58,13 @@ export default {
     },
     initForm() {
       this.addMissionForm.home_country = '';
-      this.addMissionForm.destinationcity = '';
+      this.addMissionForm.destination_city = '';
     },
     onSubmit(evt) {
       evt.preventDefault();
       const payload = {
         home_country: this.addMissionForm.home_country,
-        destinationcity: this.addMissionForm.destinationcity,
+        destination_city: this.addMissionForm.destination_city,
       };
       this.addMission(payload);
       this.initForm();
