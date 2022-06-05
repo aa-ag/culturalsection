@@ -21,10 +21,12 @@
     <router-view/>
     <div class="divider"></div>
     <footer class="fixed-bottom">
-      <div class="p-2">
-        <div class="text-center p3">&copy; 2022</div>
-        <div class="text-center p3 muted"><a href="/legal">Legal</a></div>
-        <div class="text-center p3 muted"><a href="/about">About</a></div>
+      <div class="mb4">
+        <div class="text-center p4">&copy; 2022</div>
+        <div class="text-center">
+          <a href="/legal">Legal</a>
+          <a href="/about">About</a>
+        </div>
       </div>
     </footer>
   </div>
