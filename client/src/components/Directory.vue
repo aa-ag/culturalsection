@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <p>Directory</p>
-    <b-form-input v-model="text" placeholder="Enter a country"></b-form-input>
-    <div class="mt-2">{{ text }}</div>
+    <b-form-input v-model="country" placeholder="Enter a country"></b-form-input>
+    <div class="mt-2">{{ country }}</div>
   </div>
 </template>
 <style>
@@ -16,7 +16,7 @@ export default {
   name: 'Directory',
   data() {
     return {
-      text: '',
+      country: '',
       result: '',
     };
   },
