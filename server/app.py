@@ -100,20 +100,11 @@ def add_mission():
         return {"message": "new mission added!"}
 
 
-@app.route('/directory/<string:country>', methods=['GET'])
+@app.route('/directory', methods=['GET'])
 def directory():
     if request.method == 'GET':
-        missions_query = Mission.query.filter(
-            Mission.home_country == "USA"
-        ).all()
-
-        all_missions = [
-            {
-                "home_country": mission.home_country,
-                "destination_city": mission.destination_city
-            } for mission in missions_query
-        ]
-        return {"count": len(all_missions), "missions": all_missions}
+        print(request.get_json())
+        return {"status": "success"}
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
