@@ -15,6 +15,7 @@
     </b-form-group>
     <b-button type="submit" variant="primary">Submit</b-button>
     </b-form>
+    <div class="mt-2">{{ result }}</div>
   </div>
 </template>
 <style>
@@ -32,6 +33,7 @@ export default {
       getMissionForm: {
         home_country: '',
       },
+      result: '',
     };
   },
   methods: {
