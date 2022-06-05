@@ -22,9 +22,10 @@
     <div class="divider"></div>
     <footer class="fixed-bottom">
       <div class="mb4">
-        <div class="text-center p4">&copy; 2022</div>
-        <div class="text-center" id="more">
+        <div class="text-center small">&copy; 2022</div>
+        <div class="text-center small" id="more">
           <a href="/legal">Legal</a>
+          <small>|</small>
           <a href="/about">About</a>
         </div>
       </div>
