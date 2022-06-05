@@ -34,7 +34,8 @@ export default {
       getMissionForm: {
         home_country: '',
       },
-      result: '',
+      count: '',
+      missions: '',
     };
   },
   methods: {
