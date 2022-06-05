@@ -40,6 +40,9 @@ export default {
     getMission(payload) {
       const path = 'http://localhost:5000/directory';
       axios.post(path, payload)
+        .then((res) => {
+          this.result = res.data.result;
+        })
         .catch((error) => {
           // eslint-disable-next-line
           console.log(error);
