@@ -100,10 +100,8 @@ def add_mission():
         return {"message": "new mission added!"}
 
 
-@app.route('/directory/<string:id>', methods=['GET'])
+@app.route('/directory/<string:country>', methods=['GET'])
 def directory():
-    print("(:w")
-    # print(request.get_json())
     if request.method == 'GET':
         missions_query = Mission.query.filter(
             Mission.home_country == "USA"
