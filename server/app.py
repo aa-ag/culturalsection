@@ -110,6 +110,7 @@ def directory():
         
         all_matches = [
             {
+                "id": mission.id,
                 "home_country": mission.home_country,
                 "destination_city": mission.destination_city
             } for mission in missions_query
