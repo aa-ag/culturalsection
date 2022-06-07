@@ -2,7 +2,7 @@
 
 ### what is this?
 
-A responsive single-page app to compile events organized by consulates in different cities.
+A responsive single-page app to compile all diplomatic missions' contact information, FAQ's and the events organized by consulates in different cities.
 
 ### environment
 
@@ -13,7 +13,7 @@ A responsive single-page app to compile events organized by consulates in differ
 
 **infrastructure**
 - `AWS`
-- `PÍostgres`
+- `Postgres`
 - `psycopg2-binary`
 
 **server**
