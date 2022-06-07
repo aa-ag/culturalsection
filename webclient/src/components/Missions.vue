@@ -3,11 +3,13 @@
     <p>Embassies &amp; Consulates</p>
     <div class="mb-3">
         <p>New users</p>
-        <a class="btn btn-dark" href="signup" role="button">Signup page</a>
+        <a class="btn btn-dark" href="signup"
+        role="button">Signup page</a>
     </div>
     <div class="mb-3">
         <p>Welcome back!</p>
-        <a class="btn btn-dark" href="login" role="button">Login page</a>
+        <a class="btn btn-dark" href="login"
+        role="button">Login page</a>
     </div>
   </div>
 </template>

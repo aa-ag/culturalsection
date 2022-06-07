@@ -16,9 +16,9 @@
     <b-button type="submit" variant="primary">Submit</b-button>
     </b-form>
     <div>{{ count }}</div>
-    <div v-for="mission in missions" v-bind:key="mission.id">
-      {{ mission }}
-    </div>
+    <!-- <div v-for="mission in missions" v-bind:key="mission.id"> -->
+    <div>{{ missions }}</div>
+    <!-- </div> -->
   </div>
 </template>
 <style>

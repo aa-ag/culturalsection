@@ -109,14 +109,10 @@ def directory():
         ).all()
         
         all_matches = [
-            {
-                "id": mission.id,
-                "home_country": mission.home_country,
-                "destination_city": mission.destination_city
-            } for mission in missions_query
+            mission.destination_city for mission in missions_query
         ]
         return {
-            "count": f'{len(all_matches)} consulates found',
+            "count": f'consulates found for {data["home_country"]}: {len(all_matches)} ',
             "missions": all_matches
         }
 
