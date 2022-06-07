@@ -115,7 +115,10 @@ def directory():
                 "destination_city": mission.destination_city
             } for mission in missions_query
         ]
-        return {"count": len(all_matches), "missions": all_matches}
+        return {
+            "count": f'{len(all_matches)} consulates found',
+            "missions": all_matches
+        }
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
