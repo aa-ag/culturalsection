@@ -1,12 +1,18 @@
 <template>
   <div class="container">
     <b-form @submit="onSubmit" @reset="onReset" class="w-100">
-      <b-form-input list="countries-list"></b-form-input>
-      <datalist id="countries-list">
-        <option v-for="country in countries" v-bind:key="country.name">
-          {{ country }}
-        </option>
-      </datalist>
+      <b-form-group
+        id="form-homecountry-group"
+        label="Home country"
+        label-for="form-homecountry-input">
+        <b-form-input
+          id="form-homecountry-input"
+          type="text"
+          v-model="getMissionForm.home_country"
+          required
+          placeholder="Enter your mission's home country">
+      </b-form-input>
+    </b-form-group>
     <b-button type="submit" variant="primary">Submit</b-button>
     </b-form>
     <div>{{ count }}</div>
@@ -30,7 +36,6 @@ export default {
       getMissionForm: {
         home_country: '',
       },
-      countries: ['USA', 'France', 'Belgium', 'Argentina'],
       count: '',
       missions: '',
     };
