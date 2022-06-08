@@ -26,6 +26,10 @@
       </b-form-input>
     </b-form-group>
     <b-button type="submit" variant="primary">Submit</b-button>
+    <b-form-text id="directory-helper">
+      example:
+      search for US consulates in Spain's capital by entering "USA" and "Madrid"
+    </b-form-text>
     </b-form>
     <div>{{ count }}</div>
     <div v-for="mission in missions" v-bind:key="mission.id">
