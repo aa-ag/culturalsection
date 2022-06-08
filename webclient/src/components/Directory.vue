@@ -47,6 +47,7 @@ export default {
     return {
       getMissionForm: {
         home_country: '',
+        destination_city: '',
       },
       count: '',
       missions: '',
@@ -67,11 +68,13 @@ export default {
     },
     initForm() {
       this.getMissionForm.home_country = '';
+      this.getMissionForm.destination_city = '';
     },
     onSubmit(evt) {
       evt.preventDefault();
       const payload = {
         home_country: this.getMissionForm.home_country,
+        destination_city: this.getMissionForm.destination_city,
       };
       this.getMission(payload);
       this.initForm();
