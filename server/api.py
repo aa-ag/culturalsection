@@ -106,7 +106,8 @@ def directory():
     if request.method == 'POST':
         data = request.get_json()
         missions_query = Mission.query.filter(
-            Mission.home_country == data["home_country"]
+            Mission.home_country == data["home_country"],
+            Mission.destination_city == data["destination_city"]
         ).all()
         
         all_matches = [
