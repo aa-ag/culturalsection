@@ -5,6 +5,7 @@ from settings import db_url
 from flask_cors import CORS
 from flask_migrate import Migrate
 from sqlalchemy.dialects.postgresql import JSON
+from pprint import pprint
 
 ############------------ GLOBAL VARIABLE(S) ------------###########
 ### app configuration
