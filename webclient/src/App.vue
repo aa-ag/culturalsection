@@ -19,8 +19,8 @@
     </b-navbar>
     <div class="divider"></div>
     <router-view/>
-    <div class="divider"></div>
     <footer>
+      <div class="divider"></div>
       <div class="flex-shrink-0 py-4 bg-light"></div>
       <!-- <div class="mb4">
         <div class="text-center small" id="copyright">&copy; 2022</div>
