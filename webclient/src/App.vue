@@ -19,8 +19,9 @@
     </b-navbar>
     <div class="divider"></div>
     <router-view/>
+    <div class="divider"></div>
     <footer class="flex-shrink-0 py-4 bg-light">
-        <!-- <div class="text-center small" id="copyright">&copy; 2022</div> -->
+        <div class="text-center small" id="copyright">&copy; 2022</div>
         <div class="text-center small" id="more">
           <a href="/legal">Legal</a>
           <small>|</small>
@@ -29,6 +30,7 @@
     </footer>
   </div>
 </template>
+
 <style>
 .navbar {
   padding-top: 0.6rem;

@@ -9,6 +9,9 @@
   </div>
 </template>
 <style>
+.testing {
+  height: 100%;
+}
 #searchButton {
   margin-top: 0.6rem;
 }
