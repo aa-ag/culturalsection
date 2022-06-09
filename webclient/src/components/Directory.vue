@@ -1,36 +1,37 @@
 <template>
   <div class="container">
-    <b-form @submit="onSubmit" @reset="onReset" class="w-100">
+    <b-form @submit="onSubmit" @reset="onReset" class="inline">
       <b-form-group
         id="form-homecountry-group"
-        label="Home country"
+        label="Embassy or Consulate of"
         label-for="form-homecountry-input">
         <b-form-input
           id="form-homecountry-input"
           type="text"
           v-model="getMissionForm.home_country"
           required
-          placeholder="Enter your mission's home country">
+          placeholder="Home country">
       </b-form-input>
     </b-form-group>
     <b-form-group
       id="form-destination_city-group"
-      label="Destination city"
+      label="In"
       label-for="form-destination_city-input">
       <b-form-input
         id="form-destination_city-input"
         type="text"
         v-model="getMissionForm.destination_city"
         required
-        placeholder="Enter your mission's destination city">
+        placeholder="Destination city">
       </b-form-input>
     </b-form-group>
     <b-button type="submit" variant="primary">Submit</b-button>
     <b-form-text id="directory-helper">
-      example:
+      Example:
       search for US consulates in Spain's capital by entering "USA" and "Madrid"
     </b-form-text>
     </b-form>
+    <p>Alternatively, <a href="#">browse manually</a> or using our <a href="#">diplomap</a></p>
     <div>{{ count }}</div>
     <div v-for="mission in missions" v-bind:key="mission.id">
       <div>{{ mission }}</div>
