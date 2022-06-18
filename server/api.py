@@ -95,6 +95,11 @@ def calendar():
 
 @app.route('/admin', methods=['GET', 'POST'])
 def add_mission():
+    '''
+     handle POST request for /admin route,
+     format the request, and add a new mission
+     to the db
+    '''
     if request.method == 'POST':
         data = request.get_json()
         new_mission = Mission(
