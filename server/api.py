@@ -125,12 +125,9 @@ def directory():
             Mission.destination_city == data["destination_city"]
         ).all()
         
-        if missions_query:
-            all_matches = [
-                mission.destination_city for mission in missions_query
-            ]
-        else:
-            raise "404"
+        all_matches = [
+            mission.destination_city for mission in missions_query
+        ]
             
         return {
             "count": f'consulates found for {data["home_country"]}: {len(all_matches)} ',
