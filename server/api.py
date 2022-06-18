@@ -113,6 +113,11 @@ def add_mission():
 
 @app.route('/directory', methods=['GET', 'POST'])
 def directory():
+    '''
+     Use user input from the frontend, to query the db
+     for a given mission;  if a match is found, returns 
+     db data for destination_cities
+    '''
     if request.method == 'POST':
         data = request.get_json()
         missions_query = Mission.query.filter(
