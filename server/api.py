@@ -75,6 +75,11 @@ class FQA(db.Model):
 ############------------ ROUTE(S) ------------############
 @app.route('/calendar', methods=['GET'])
 def calendar():
+    '''
+     query the DB for all missions, 
+     format the result into a payload with home_countries 
+     & destination_cities
+    '''
     if request.method == 'GET':
         missions_query = Mission.query.all()
 
