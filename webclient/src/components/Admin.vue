@@ -6,7 +6,33 @@
       </b-button>
 
       <b-modal id="modal-1" title="addMission">
-        <p class="my-4">Modal working!</p>
+        <b-form @submit="onSubmit" @reset="onReset" class="w-100">
+          <b-form-group
+            id="form-homecountry-group"
+            label="Home country"
+            label-for="form-homecountry-input">
+            <b-form-input
+              id="form-homecountry-input"
+              type="text"
+              v-model="addMissionForm.home_country"
+              required
+              placeholder="Enter your mission's home country">
+          </b-form-input>
+          </b-form-group>
+          <b-form-group
+            id="form-destinationcity-group"
+            label="Destination city"
+            label-for="form-destinationcity-input">
+              <b-form-input
+                id="form-destinationcity-input"
+                type="text"
+                v-model="addMissionForm.destination_city"
+                required
+                placeholder="Enter your mission's destination city">
+              </b-form-input>
+            </b-form-group>
+          <b-button type="submit" variant="primary">Submit</b-button>
+        </b-form>
       </b-modal>
     </div>
   </div>
