@@ -8,7 +8,7 @@
       <b-modal
         id="modal-1"
         title="Add a new embassy or consulate"
-        ok-only
+        hide-footer
         >
         <b-form @submit="onSubmit" @reset="onReset" class="w-100">
           <b-form-group
