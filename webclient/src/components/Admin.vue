@@ -5,7 +5,11 @@
         Add a new mission
       </b-button>
 
-      <b-modal id="modal-1" title="Add a new embassy or consulate">
+      <b-modal
+        id="modal-1"
+        title="Add a new embassy or consulate"
+        ok-only
+        >
         <b-form @submit="onSubmit" @reset="onReset" class="w-100">
           <b-form-group
             id="form-homecountry-group"
