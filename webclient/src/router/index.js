@@ -12,6 +12,7 @@ import About from '../components/About.vue';
 import Legal from '../components/Legal.vue';
 import Reset from '../components/Reset.vue';
 import Admin from '../components/Admin.vue';
+import Browse from '../components/Browse.vue';
 
 Vue.use(VueRouter);
 
@@ -45,6 +46,11 @@ const routes = [
     path: '/directory',
     name: 'Directory',
     component: Directory,
+  },
+  {
+    path: '/browse',
+    name: 'Browse',
+    component: Browse,
   },
   {
     path: '/help',
