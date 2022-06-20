@@ -1,10 +1,11 @@
 <template>
   <div class="container">
     <b-list-group>
-      <b-list-group-item
+      <b-list-group-item class="d-flex justify-content-between align-items-center"
       v-for="(count, country, index) in missions" :key="index"
       >
-        {{ country }} {{ count }}
+        {{ country }}
+        <b-badge variant="primary" pill>{{ count }}</b-badge>
       </b-list-group-item>
     </b-list-group>
   </div>
