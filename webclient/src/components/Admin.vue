@@ -10,7 +10,7 @@
         title="Add a new embassy or consulate"
         hide-footer
         >
-        <alert response="hi"></alert>
+        <alert :response="response" v-if="showResponse"></alert>
         <b-form @submit="onSubmit" @reset="onReset" class="w-100">
           <b-form-group
             id="form-homecountry-group"
@@ -59,6 +59,8 @@ export default {
         home_country: '',
         destination_city: '',
       },
+      response: '',
+      showResponse: false,
     };
   },
   components: {
@@ -68,6 +70,9 @@ export default {
     addMission(payload) {
       const path = 'http://localhost:5000/admin';
       axios.post(path, payload)
+        .then(() => {
+          this.response = 'Mission added!';
+        })
         .catch((error) => {
           // eslint-disable-next-line
           console.log(error);
