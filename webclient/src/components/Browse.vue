@@ -15,6 +15,9 @@
   padding-top: 1.5rem;
   height: 29rem;
 }
+.list-group {
+  max-width: 450px;
+}
 </style>
 <script>
 import axios from 'axios';
