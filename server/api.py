@@ -1,5 +1,6 @@
 ############------------ IMPORTS ------------############
 ### external imports
+import json
 from flask import jsonify, request
 ### internal imports
 from configuration import *
@@ -66,6 +67,18 @@ def directory():
             "count": f"consulates found for {data['home_country']}: {len(all_matches)}",
             "missions": all_matches
         }
+
+
+@app.router('/browse', methods=['GET'])
+def browse():
+    if request.method == 'GET':
+        all_missions = Mission.query.all()
+
+    return jsonify({
+        'status': 'success',
+        'missions': all_missions
+    })
+
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
