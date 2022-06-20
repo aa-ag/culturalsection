@@ -14,16 +14,7 @@ def calendar():
      format the result into a payload with home_countries 
      & destination_cities
     '''
-    if request.method == 'GET':
-        missions_query = Mission.query.all()
-
-        all_missions = [
-            {
-                "home_country": mission.home_country,
-                "destination_city": mission.destination_city
-            } for mission in missions_query
-        ]
-        return {"count": len(all_missions), "missions": all_missions}
+    return "Calendar"
 
 
 
@@ -69,15 +60,18 @@ def directory():
         }
 
 
-@app.router('/browse', methods=['GET'])
+@app.route('/browse', methods=['GET'])
 def browse():
     if request.method == 'GET':
-        all_missions = Mission.query.all()
+        missions_query = Mission.query.all()
 
-    return jsonify({
-        'status': 'success',
-        'missions': all_missions
-    })
+        all_missions = [
+            {
+                "home_country": mission.home_country,
+                "destination_city": mission.destination_city
+            } for mission in missions_query
+        ]
+        return {"count": len(all_missions), "missions": all_missions}
 
 
 ############------------ DRIVER CODE ------------############
