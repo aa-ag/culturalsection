@@ -10,7 +10,7 @@
         title="Add a new embassy or consulate"
         hide-footer
         >
-        <alert></alert>
+        <alert response="hi"></alert>
         <b-form @submit="onSubmit" @reset="onReset" class="w-100">
           <b-form-group
             id="form-homecountry-group"
