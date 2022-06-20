@@ -1,5 +1,7 @@
 <template>
+  <div class="container">
     <p>browse</p>
+  </div>
 </template>
 <style>
 .container {
