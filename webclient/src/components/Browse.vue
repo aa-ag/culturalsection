@@ -2,9 +2,9 @@
   <div class="container">
     <b-list-group>
       <b-list-group-item
-      v-for="(mission, index) in missions" :key="index"
+      v-for="(count, country, index) in missions" :key="index"
       >
-        {{ mission }}
+        {{ country }} {{ count }}
       </b-list-group-item>
     </b-list-group>
   </div>
