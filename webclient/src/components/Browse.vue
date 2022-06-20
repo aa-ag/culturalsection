@@ -1,6 +1,12 @@
 <template>
   <div class="container">
-    {{ missions }}
+    <b-list-group>
+      <b-list-group-item
+      v-for="(mission, index) in missions" :key="index"
+      >
+        {{ mission }}
+      </b-list-group-item>
+    </b-list-group>
   </div>
 </template>
 <style>
