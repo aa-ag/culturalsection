@@ -5,6 +5,7 @@ from flask import jsonify, request
 ### internal imports
 from configuration import *
 from models import *
+from collections import defaultdict
 
 ############------------ ROUTE(S) ------------############
 @app.route('/calendar', methods=['GET'])
@@ -63,15 +64,17 @@ def directory():
 @app.route('/browse', methods=['GET'])
 def browse():
     if request.method == 'GET':
-        missions_query = Mission.query.all()
+        query = Mission.query.all()
 
-        all_missions = [
-            {
-                "home_country": mission.home_country,
-                "destination_city": mission.destination_city
-            } for mission in missions_query
-        ]
-        return {"count": len(all_missions), "missions": all_missions}
+        missions = dict()
+        
+        for mission in query:
+            missions[mission.home_country] = 0
+
+        for mission in query:
+            missions[mission.home_country] += 1
+
+        return {"missions": missions}
 
 
 ############------------ DRIVER CODE ------------############
