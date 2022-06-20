@@ -1,8 +1,6 @@
 ############------------ IMPORTS ------------############
 ### external imports
 from flask import jsonify, request
-from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy.dialects.postgresql import JSON
 ### internal imports
 from configuration import *
 from models import *
@@ -65,7 +63,7 @@ def directory():
         ]
             
         return {
-            "count": f'consulates found for {data["home_country"]}: {len(all_matches)} ',
+            "count": f"consulates found for {data['home_country']}: {len(all_matches)}",
             "missions": all_matches
         }
 

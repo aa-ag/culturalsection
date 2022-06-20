@@ -10,6 +10,7 @@
         title="Add a new embassy or consulate"
         hide-footer
         >
+        <alert></alert>
         <b-form @submit="onSubmit" @reset="onReset" class="w-100">
           <b-form-group
             id="form-homecountry-group"
@@ -49,6 +50,7 @@
 </style>
 <script>
 import axios from 'axios';
+import Alert from './Alert.vue';
 
 export default {
   data() {
@@ -58,6 +60,9 @@ export default {
         destination_city: '',
       },
     };
+  },
+  components: {
+    alert: Alert,
   },
   methods: {
     addMission(payload) {

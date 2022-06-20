@@ -1,4 +1,8 @@
 ############------------ IMPORTS ------------############
+### external imports
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.dialects.postgresql import JSON
+
 ### internal imports
 from configuration import *
 
