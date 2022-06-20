@@ -72,6 +72,7 @@ export default {
       axios.post(path, payload)
         .then(() => {
           this.response = 'Mission added!';
+          this.showResponse = true;
         })
         .catch((error) => {
           // eslint-disable-next-line
