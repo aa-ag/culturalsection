@@ -7,7 +7,6 @@ import Signup from '../components/Signup.vue';
 import Calendar from '../components/Calendar.vue';
 import Directory from '../components/Directory.vue';
 import Help from '../components/Help.vue';
-import Contact from '../components/Contact.vue';
 import About from '../components/About.vue';
 import Legal from '../components/Legal.vue';
 import Reset from '../components/Reset.vue';
@@ -56,11 +55,6 @@ const routes = [
     path: '/help',
     name: 'Help',
     component: Help,
-  },
-  {
-    path: '/contact',
-    name: 'Contact',
-    component: Contact,
   },
   {
     path: '/about',
