@@ -1,7 +1,8 @@
 <template>
   <div class="container">
     <b-list-group>
-      <b-list-group-item class="d-flex justify-content-between align-items-center"
+      <b-list-group-item
+      class="d-flex justify-content-between align-items-center"
       v-for="(count, country, index) in missions" :key="index"
       >
         <a :href="'#'">{{ country }}</a>

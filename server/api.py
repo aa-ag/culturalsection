@@ -18,7 +18,6 @@ def calendar():
     return "Calendar"
 
 
-
 @app.route('/admin', methods=['GET', 'POST'])
 def add_mission():
     '''
@@ -56,7 +55,7 @@ def directory():
         ]
             
         return {
-            "count": f"consulates found for {data['home_country']}: {len(all_matches)}",
+            "count": f"{data['home_country']}: {len(all_matches)}",
             "missions": all_matches
         }
 
