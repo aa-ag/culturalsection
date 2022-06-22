@@ -63,6 +63,11 @@ def directory():
 
 @app.route('/browse', methods=['GET'])
 def browse():
+    '''
+     get all countries, count how many cities
+     each existing country has mission on, and
+     return an object with count by country
+    '''
     if request.method == 'GET':
         query = Mission.query.all()
 
