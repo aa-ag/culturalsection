@@ -5,7 +5,7 @@
       class="d-flex justify-content-between align-items-center"
       v-for="(count, country, index) in missions" :key="index"
       >
-        <a :href="'#'">{{ country }}</a>
+        <a :href="'#'" v-on:click="getClickData(country)">{{ country }}</a>
         <b-badge variant="primary" pill>{{ count }}</b-badge>
       </b-list-group-item>
     </b-list-group>
@@ -40,6 +40,10 @@ export default {
           // eslint-disable-next-line
           console.error(error);
         });
+    },
+    getClickData(country) {
+      // eslint-disable-next-line
+      console.log(country);
     },
   },
   created() {
