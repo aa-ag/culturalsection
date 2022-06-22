@@ -19,7 +19,7 @@
     </b-navbar>
     <div class="divider"></div>
     <router-view/>
-    <div class="divider"></div>
+    <!-- <div class="divider"></div>
     <footer class="flex-shrink-0 py-4 bg-light">
         <div class="text-center small" id="copyright">&copy; 2022</div>
         <div class="text-center small" id="more">
@@ -27,7 +27,7 @@
           <small>|</small>
           <a href="/about">About</a>
       </div>
-    </footer>
+    </footer> -->
   </div>
 </template>
 
