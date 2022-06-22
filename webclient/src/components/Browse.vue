@@ -4,7 +4,7 @@
       <b-list-group-item class="d-flex justify-content-between align-items-center"
       v-for="(count, country, index) in missions" :key="index"
       >
-        {{ country }}
+        <a :href="'#'">{{ country }}</a>
         <b-badge variant="primary" pill>{{ count }}</b-badge>
       </b-list-group-item>
     </b-list-group>
