@@ -1,9 +1,8 @@
 <template>
   <div id="app">
     <b-navbar toggleable="lg" type="dark" variant="info">
+      <b-navbar-toggle class="mr-auto" target="nav-collapse"></b-navbar-toggle>
       <b-navbar-brand href="/">Cultural Section</b-navbar-brand>
-
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
