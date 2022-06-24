@@ -12,11 +12,13 @@ import About from '../components/About.vue';
 import Legal from '../components/Legal.vue';
 import Reset from '../components/Reset.vue';
 import Admin from '../components/Admin.vue';
-import Page from '../components/Page.vue';
+// views
+import Mission from '../views/Mission.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
+  // components
   {
     path: '/',
     name: 'Home',
@@ -53,11 +55,6 @@ const routes = [
     component: Directory,
   },
   {
-    path: '/page',
-    name: 'Page',
-    component: Page,
-  },
-  {
     path: '/help',
     name: 'Help',
     component: Help,
@@ -81,6 +78,12 @@ const routes = [
     path: '/admin',
     name: 'Admin',
     component: Admin,
+  },
+  // views
+  {
+    path: '/mission',
+    name: 'Mission',
+    component: Mission,
   },
 ];
 
