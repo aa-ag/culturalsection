@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../components/Home.vue';
+import Events from '../components/Events.vue';
 import Missions from '../components/Missions.vue';
 import Login from '../components/Login.vue';
 import Signup from '../components/Signup.vue';
@@ -11,7 +12,6 @@ import About from '../components/About.vue';
 import Legal from '../components/Legal.vue';
 import Reset from '../components/Reset.vue';
 import Admin from '../components/Admin.vue';
-import Browse from '../components/Browse.vue';
 import Page from '../components/Page.vue';
 
 Vue.use(VueRouter);
@@ -21,6 +21,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
+  },
+  {
+    path: '/events',
+    name: 'Event',
+    component: Events,
   },
   {
     path: '/missions',
@@ -46,11 +51,6 @@ const routes = [
     path: '/directory',
     name: 'Directory',
     component: Directory,
-  },
-  {
-    path: '/browse',
-    name: 'Browse',
-    component: Browse,
   },
   {
     path: '/page',

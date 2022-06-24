@@ -2,8 +2,7 @@
   <div id="app">
     <b-navbar toggleable="lg" type="dark" variant="info">
       <b-navbar-toggle class="mr-auto" target="nav-collapse"></b-navbar-toggle>
-      <b-navbar-brand href="/">Cultural Section</b-navbar-brand>
-
+        <b-navbar-brand href="/">Cultural Section</b-navbar-brand>
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
           <b-nav-item href="/help">Help</b-nav-item>
@@ -18,15 +17,6 @@
     </b-navbar>
     <div class="divider"></div>
     <router-view/>
-    <!-- <div class="divider"></div>
-    <footer class="flex-shrink-0 py-4 bg-light">
-        <div class="text-center small" id="copyright">&copy; 2022</div>
-        <div class="text-center small" id="more">
-          <a href="/legal">Legal</a>
-          <small>|</small>
-          <a href="/about">About</a>
-      </div>
-    </footer> -->
   </div>
 </template>
 

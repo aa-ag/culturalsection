@@ -8,6 +8,27 @@ from models import *
 from collections import defaultdict
 
 ############------------ ROUTE(S) ------------############
+@app.route('/', methods=['GET'])
+def home():
+    '''
+     get all countries, count how many cities
+     each existing country has mission on, and
+     return an object with count by country
+    '''
+    if request.method == 'GET':
+        query = Mission.query.all()
+
+        missions = dict()
+        
+        for mission in query:
+            missions[mission.home_country] = 0
+
+        for mission in query:
+            missions[mission.home_country] += 1
+
+        return {"missions": missions}
+
+
 @app.route('/calendar', methods=['GET'])
 def calendar():
     '''
@@ -58,27 +79,6 @@ def directory():
             "count": f"{data['home_country']}: {len(all_matches)}",
             "missions": all_matches
         }
-
-
-@app.route('/browse', methods=['GET'])
-def browse():
-    '''
-     get all countries, count how many cities
-     each existing country has mission on, and
-     return an object with count by country
-    '''
-    if request.method == 'GET':
-        query = Mission.query.all()
-
-        missions = dict()
-        
-        for mission in query:
-            missions[mission.home_country] = 0
-
-        for mission in query:
-            missions[mission.home_country] += 1
-
-        return {"missions": missions}
 
 
 ############------------ DRIVER CODE ------------############

@@ -1,27 +1,53 @@
 <template>
   <div class="container">
-    <label for="input-with-list">Pick a city</label>
-    <b-form-input list="input-list" id="input-with-list"></b-form-input>
-    <b-form-datalist id="input-list" :options="options"></b-form-datalist>
-    <button type="submit"
-    class="btn btn-primary"
-    id="searchButton">View Calendar</button>
+    <b-list-group>
+      <b-list-group-item
+      class="d-flex justify-content-between align-items-center"
+      v-for="(count, country, index) in missions" :key="index"
+      >
+        <a :href="'#'" v-on:click="getClickData(country)">{{ country }}</a>
+        <b-badge variant="primary" pill>{{ count }}</b-badge>
+      </b-list-group-item>
+    </b-list-group>
   </div>
 </template>
 <style>
-.testing {
-  height: 100%;
+.container {
+  padding-top: 1.5rem;
+  height: 29rem;
 }
-#searchButton {
-  margin-top: 0.6rem;
+.list-group {
+  max-width: 450px;
 }
 </style>
 <script>
+import axios from 'axios';
+
 export default {
   data() {
     return {
-      options: ['Nashville', 'Chicago', 'Miami', 'Washington, D.C.', 'New York'],
+      missions: [],
     };
+  },
+  methods: {
+    getMissions() {
+      const path = 'http://localhost:5000/';
+      axios.get(path)
+        .then((res) => {
+          this.missions = res.data.missions;
+        })
+        .catch((error) => {
+          // eslint-disable-next-line
+          console.error(error);
+        });
+    },
+    getClickData(country) {
+      // eslint-disable-next-line
+      console.log(country);
+    },
+  },
+  created() {
+    this.getMissions();
   },
 };
 </script>
