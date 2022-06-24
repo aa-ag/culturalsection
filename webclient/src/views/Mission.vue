@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <p>mission page</p>
+    <b-button ref="/">Back</b-button>
   </div>
 </template>
 <style>

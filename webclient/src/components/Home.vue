@@ -7,7 +7,7 @@
           class="d-flex justify-content-between align-items-center"
           v-for="(count, country, index) in missions" :key="index"
           >
-          <a :href="'#'" v-on:click="getClickData(country)">{{ country }}</a>
+          <a :href="'/mission'" v-on:click="getClickData(country)">{{ country }}</a>
           <b-badge variant="primary" pill>{{ count }}</b-badge>
         </b-list-group-item>
         </b-list-group>
