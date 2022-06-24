@@ -27,6 +27,25 @@ def home():
             missions[mission.home_country] += 1
 
         return {"missions": missions}
+    
+
+@app.route('/mission', methods=['GET'])
+def mission():
+    if request.method == 'GET':
+        query = Mission.query.all()
+
+        cities = list()
+
+        for mission in query:
+            if mission.home_country == "USA":
+                cities.append(
+                    mission.destination_city
+                )
+            
+        return {
+            "count": len(cities),
+            "cities": cities
+        }
 
 
 @app.route('/calendar', methods=['GET'])
