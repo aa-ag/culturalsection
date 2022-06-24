@@ -1,14 +1,19 @@
 <template>
   <div class="container">
-    <b-list-group>
-      <b-list-group-item
-      class="d-flex justify-content-between align-items-center"
-      v-for="(count, country, index) in missions" :key="index"
-      >
-        <a :href="'#'" v-on:click="getClickData(country)">{{ country }}</a>
-        <b-badge variant="primary" pill>{{ count }}</b-badge>
-      </b-list-group-item>
-    </b-list-group>
+
+    <b-card-group deck>
+      <b-card header="Foreing diplomatic missions in the United States">
+        <b-list-group class="col-md-8 mx-auto">
+          <b-list-group-item
+          class="d-flex justify-content-between align-items-center"
+          v-for="(count, country, index) in missions" :key="index"
+          >
+          <a :href="'#'" v-on:click="getClickData(country)">{{ country }}</a>
+          <b-badge variant="primary" pill>{{ count }}</b-badge>
+        </b-list-group-item>
+        </b-list-group>
+      </b-card>
+    </b-card-group>
   </div>
 </template>
 <style>
@@ -18,6 +23,7 @@
 }
 .list-group {
   max-width: 450px;
+  left: auto;
 }
 </style>
 <script>
