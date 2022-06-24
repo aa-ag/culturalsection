@@ -48,7 +48,7 @@ export default {
     },
     getClickData(country) {
       // eslint-disable-next-line
-      console.log(country);
+      console.error(country);
     },
   },
   created() {

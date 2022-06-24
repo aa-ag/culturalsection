@@ -8,8 +8,6 @@
           <b-nav-item href="/help">Help</b-nav-item>
           <b-nav-item href="/legal">Legal</b-nav-item>
         </b-navbar-nav>
-
-        <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <b-nav-item href="/missions" right>Diplomatic Missions</b-nav-item>
         </b-navbar-nav>
