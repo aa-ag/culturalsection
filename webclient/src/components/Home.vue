@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-
     <b-card-group deck>
       <b-card header="Foreing diplomatic missions in the United States">
         <b-list-group class="col-md-8 mx-auto">
