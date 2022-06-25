@@ -1,8 +1,7 @@
 <template>
   <div class="container">
     <b-card-group deck>
-      <b-card header="Foreing diplomatic missions in">
-        <b-form-select v-model="selected" :options="options"></b-form-select>
+      <b-card header="Foreing diplomatic missions in the United States">
         <b-list-group class="col-md-8 mx-auto">
           <b-list-group-item
           class="d-flex justify-content-between align-items-center"
@@ -33,10 +32,6 @@ export default {
   data() {
     return {
       missions: [],
-      selected: null,
-      options: [
-        { value: null, text: 'the United States' },
-      ],
     };
   },
   methods: {
@@ -53,8 +48,7 @@ export default {
     },
     getClickData(country) {
       // eslint-disable-next-line
-      // console.error(country);
-      this.$emit('country', country);
+      console.error(country);
     },
   },
   created() {

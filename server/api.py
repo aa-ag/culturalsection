@@ -31,6 +31,10 @@ def home():
 
 @app.route('/mission', methods=['GET'])
 def mission():
+    '''
+     Query the db and return all cities
+     where the US has a consulate or an embassy
+    '''
     if request.method == 'GET':
         query = Mission.query.all()
 
