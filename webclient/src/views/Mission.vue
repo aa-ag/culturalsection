@@ -1,7 +1,10 @@
 <template>
   <div class="container">
-    <h1>{{ country }}</h1>
-    <!-- {{ cities }} -->
+    <!-- <h1>{{ country }}</h1> -->
+    <!-- <div>{{ count }}</div> -->
+    <div v-for="city in cities" v-bind:key="city.id">
+      <div>{{ city }}</div>
+    </div>
     <b-button
     @click="$router.go(-1)"
     variant="primary"
