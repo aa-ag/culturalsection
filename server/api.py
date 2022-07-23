@@ -36,15 +36,18 @@ def mission():
      where the US has a consulate or an embassy
     '''
     if request.method == 'GET':
-        query = Mission.query.all()
+        data = request.get_json()
+
+        query = Mission.query.filter(
+            Mission.home_country == data["home_country"]
+        )
 
         cities = list()
 
         for mission in query:
-            if mission.home_country == "USA":
-                cities.append(
-                    mission.destination_city
-                )
+            cities.append(
+                mission.destination_city
+            )
             
         return {
             "count": len(cities),
