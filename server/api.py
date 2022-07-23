@@ -42,12 +42,9 @@ def mission():
             Mission.home_country == data["home_country"]
         ).all()
 
-        cities = list()
-
-        for mission in query:
-            cities.append(
-                mission.destination_city
-            )
+        cities = list(
+            mission.destination_city for mission in query
+        )
             
         return {
             "count": len(cities),
