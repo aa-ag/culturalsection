@@ -40,7 +40,7 @@ def mission():
 
         query = Mission.query.filter(
             Mission.home_country == data["home_country"]
-        )
+        ).all()
 
         cities = list()
 
